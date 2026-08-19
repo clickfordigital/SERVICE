@@ -7,6 +7,7 @@ import { ServiceBenefits } from './components/ServiceBenefits';
 import { HowItWorks } from './components/HowItWorks';
 import { DeliverablesSection } from './components/DeliverablesSection';
 import { InteractiveCareerAnalyzer } from './components/InteractiveCareerAnalyzer';
+import { YouTubeVideoSection } from './components/YouTubeVideoSection';
 import { SeoContentGuide } from './components/SeoContentGuide';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
@@ -76,7 +77,13 @@ export default function App() {
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* 7. Comprehensive In-depth SEO Topical Guide */}
+        {/* 7. YouTube Masterclasses & Video Guides Section */}
+        <YouTubeVideoSection 
+          onOpenBooking={handleOpenBooking} 
+          onOpenWhatsApp={handleOpenWhatsApp} 
+        />
+
+        {/* 8. Comprehensive In-depth SEO Topical Guide */}
         <SeoContentGuide 
           onOpenBooking={handleOpenBooking} 
         />

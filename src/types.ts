@@ -79,3 +79,19 @@ export interface CareerHouseInfo {
   planetaryRulers: string;
   sampleOutcomes: string[];
 }
+
+export interface YouTubeVideo {
+  id: string;
+  youtubeId: string;
+  title: string;
+  hindiHeadline?: string;
+  description: string;
+  category: 'job-timing' | 'promotion' | 'business' | 'govt-job' | 'remedies';
+  views: string;
+  duration: string;
+  highlight: string;
+  topics: string[];
+  thumbnailUrl: string;
+  badgeColor?: string;
+}
+

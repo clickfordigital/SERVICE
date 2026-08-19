@@ -5,7 +5,8 @@ import {
   FaqItem, 
   Testimonial, 
   InternalLinkItem,
-  CareerHouseInfo
+  CareerHouseInfo,
+  YouTubeVideo
 } from '../types';
 
 export const HERO_STATS = [
@@ -486,3 +487,91 @@ export const INTERNAL_LINKS: InternalLinkItem[] = [
     description: 'Which gemstone to wear: Yellow Sapphire, Blue Sapphire, Emerald, or Ruby for executive success.'
   }
 ];
+
+export const YOUTUBE_VIDEOS: YouTubeVideo[] = [
+  {
+    id: 'yt-1',
+    youtubeId: 'dQw4w9WgXcQ',
+    title: 'Job Change Timing in Kundli: Which Year & Month is Right for You?',
+    hindiHeadline: 'कुंडली में नौकरी कब बदलेगी? सटीक महीना व वर्ष',
+    description: 'Learn how the 10th house, 6th house, and active Vimshottari Mahadasha reveal the exact high-probability window for switching your job with substantial salary hikes.',
+    category: 'job-timing',
+    views: '340K+ views',
+    duration: '16:45',
+    highlight: 'Dasha & Transit Secrets',
+    topics: ['10th House', 'Vimshottari Dasha', 'Salary Hike Timing', 'Jupiter Transit'],
+    thumbnailUrl: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80',
+    badgeColor: '#E67E22'
+  },
+  {
+    id: 'yt-2',
+    youtubeId: '7NOSnzc_oU4',
+    title: 'Government Job vs Private Job: Astrological Combinations for Civil Services & PSUs',
+    hindiHeadline: 'सरकारी नौकरी के राजयोग | Surya & Mangal Strength',
+    description: 'Understand the specific roles of the Sun (Surya), Mars (Mangal), and Saturn in clearing competitive exams, public sector interviews, and judicial appointments.',
+    category: 'govt-job',
+    views: '520K+ views',
+    duration: '21:10',
+    highlight: 'Sun & Mars Alignment',
+    topics: ['Surya Strength', 'UPSC & SSC Yogas', '6th House Competitions', 'Authority Yogas'],
+    thumbnailUrl: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+    badgeColor: '#D35400'
+  },
+  {
+    id: 'yt-3',
+    youtubeId: '3JZ_D3ELwOQ',
+    title: 'Job vs Business in Astrology: Who Should NEVER Do a 9-to-5 Job?',
+    hindiHeadline: 'नौकरी या व्यापार? कुंडली बताएगी सही रास्ता',
+    description: 'A comprehensive guide analyzing the 7th house (Vyapar), 3rd house (Enterprise), and Mercury placement to determine whether startup entrepreneurship or corporate salary suits you best.',
+    category: 'business',
+    views: '410K+ views',
+    duration: '18:30',
+    highlight: '7th House & Mercury',
+    topics: ['7th House Vyapar', '3rd House Courage', 'Mercury Strength', 'Startup Yogas'],
+    thumbnailUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    badgeColor: '#27AE60'
+  },
+  {
+    id: 'yt-4',
+    youtubeId: 'kJQP7kiw5Fk',
+    title: 'Saturn (Shani) in 10th House: Karmic Career Delays & Monumental Executive Rise',
+    hindiHeadline: '10वें भाव में शनि: शुरुआत में संघर्ष या बड़ा पद?',
+    description: 'Why Saturn in the 10th house often creates initial hurdles before age 32, followed by unstoppable authority, leadership power, and unmatched reputation.',
+    category: 'promotion',
+    views: '680K+ views',
+    duration: '24:15',
+    highlight: 'Shani Dev Karma Bhava',
+    topics: ['Shani in 10th', 'Karmic Timing', 'Leadership Rise', 'Practical Shani Remedies'],
+    thumbnailUrl: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80',
+    badgeColor: '#2C3E50'
+  },
+  {
+    id: 'yt-5',
+    youtubeId: 'L_LUpnjgPso',
+    title: 'Overcoming Workplace Politics & Stalled Promotions with Simple Vedic Remedies',
+    hindiHeadline: 'ऑफिस पॉलिटिक्स से छुटकारा व प्रमोशन के उपाय',
+    description: 'Practical, non-superstitious remedies including Lagna-specific gemstones, desk orientation Vastu, and specific day Beej Mantras to neutralize toxic workplace energy.',
+    category: 'remedies',
+    views: '295K+ views',
+    duration: '14:50',
+    highlight: 'Actionable Remedies',
+    topics: ['Office Politics', 'Desk Vastu', 'Appraisal Yogas', 'Energized Gemstones'],
+    thumbnailUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
+    badgeColor: '#8E44AD'
+  },
+  {
+    id: 'yt-6',
+    youtubeId: 'fJ9rUzIMcZQ',
+    title: 'Foreign Job Settlement & Overseas Visa Combinations in Vedic Horoscope',
+    hindiHeadline: 'विदेश में नौकरी व सेटलमेंट के ज्योतिषीय योग',
+    description: 'Discover how the 9th house (Long Travel), 12th house (Foreign Lands), and Rahu align to grant overseas job placements, multinational transfers, and work permits.',
+    category: 'job-timing',
+    views: '380K+ views',
+    duration: '19:05',
+    highlight: '12th House & Rahu',
+    topics: ['Foreign Relocation', '12th House', 'Rahu Placement', 'Work Visa Yogas'],
+    thumbnailUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80',
+    badgeColor: '#2980B9'
+  }
+];
+
