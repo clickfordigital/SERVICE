@@ -1,0 +1,6 @@
+{
+  "name": "Career Astrology Consultation - Hanish Bagga",
+  "description": "Expert Vedic Career Astrology & Job Prediction by Date of Birth by Acharya Hanish Bagga. In-depth Kundli analysis, job change timing, promotion forecasts, and practical remedies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
