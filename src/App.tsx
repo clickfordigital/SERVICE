@@ -7,6 +7,7 @@ import { ServiceBenefits } from './components/ServiceBenefits';
 import { HowItWorks } from './components/HowItWorks';
 import { DeliverablesSection } from './components/DeliverablesSection';
 import { InteractiveCareerAnalyzer } from './components/InteractiveCareerAnalyzer';
+import { CareerHoroscopeCalculator } from './components/CareerHoroscopeCalculator';
 import { YouTubeVideoSection } from './components/YouTubeVideoSection';
 import { SeoContentGuide } from './components/SeoContentGuide';
 import { TestimonialsSection } from './components/TestimonialsSection';
@@ -77,7 +78,13 @@ export default function App() {
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* 7. YouTube Masterclasses & Video Guides Section */}
+        {/* 7. Interactive Career Horoscope & Growth Calculator */}
+        <CareerHoroscopeCalculator 
+          onOpenBooking={handleOpenBooking} 
+          onOpenWhatsApp={handleOpenWhatsApp} 
+        />
+
+        {/* 8. YouTube Masterclasses & Video Guides Section */}
         <YouTubeVideoSection 
           onOpenBooking={handleOpenBooking} 
           onOpenWhatsApp={handleOpenWhatsApp} 
