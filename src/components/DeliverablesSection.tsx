@@ -7,9 +7,7 @@ import {
   Target, 
   Layers, 
   Sparkles, 
-  Check, 
   FileCheck2,
-  Lock,
   ArrowRight
 } from 'lucide-react';
 
@@ -56,42 +54,13 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({ onOpen
                 className="bg-[#FAF6F0] rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] hover:border-[#854820]/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-white text-[#854820] flex items-center justify-center border border-[#E8DACD] shadow-sm">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-[11px] font-bold text-[#854820] bg-[#F5EBE1] border border-[#E2D2C3] px-2.5 py-1 rounded-full">
-                      {item.badge}
-                    </span>
+                  <div className="w-12 h-12 rounded-xl bg-white text-[#854820] flex items-center justify-center border border-[#E8DACD] shadow-sm mb-4">
+                    <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] mb-2.5">
+                  <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314]">
                     {item.title}
                   </h3>
-
-                  <p className="text-sm text-[#5D4E45] leading-relaxed mb-5">
-                    {item.description}
-                  </p>
-
-                  {/* Included list */}
-                  <div className="bg-white/80 rounded-xl p-4 border border-[#E8DACD] space-y-2">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-[#854820]">
-                      Key Highlights:
-                    </div>
-                    {item.included.map((inc, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs text-[#4A3528]">
-                        <Check className="w-3.5 h-3.5 text-[#1EBE5D] shrink-0 mt-0.5" />
-                        <span>{inc}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-5 pt-3 flex items-center justify-between text-xs font-semibold text-[#854820]">
-                  <span className="flex items-center gap-1 text-[#6B5B52]">
-                    <Lock className="w-3 h-3 text-[#854820]" /> 100% Confidential
-                  </span>
-                  <span className="text-[#854820]">Included in Session</span>
                 </div>
               </div>
             );

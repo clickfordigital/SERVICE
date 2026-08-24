@@ -52,7 +52,7 @@ export interface ProcessStep {
   title: string;
   subtitle: string;
   description: string;
-  details: string[];
+  details?: string[];
   icon: string;
 }
 

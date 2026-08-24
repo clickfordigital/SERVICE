@@ -1,6 +1,6 @@
 import React from 'react';
 import { HOW_IT_WORKS_STEPS } from '../data/careerAstrologyData';
-import { Calendar, FileText, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Calendar, FileText, Sparkles, ArrowRight } from 'lucide-react';
 
 const STEP_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   Calendar,
@@ -60,21 +60,12 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
                     {step.subtitle}
                   </div>
 
-                  <p className="text-sm text-[#5D4E45] leading-relaxed mb-5">
+                  <p className="text-sm text-[#5D4E45] leading-relaxed">
                     {step.description}
                   </p>
-
-                  <div className="space-y-2 pt-2 border-t border-[#F5EBE1]">
-                    {step.details.map((detail, dIdx) => (
-                      <div key={dIdx} className="flex items-start gap-2 text-xs text-[#6B5B52]">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#854820] shrink-0 mt-0.5" />
-                        <span>{detail}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between">
+                <div className="mt-8 pt-4 border-t border-[#F0E4D8] flex items-center justify-between">
                   <span className="text-xs font-medium text-[#8A7A70]">Step {idx + 1} of 3</span>
                   {idx === 0 && (
                     <button

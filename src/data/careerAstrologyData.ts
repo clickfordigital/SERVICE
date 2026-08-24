@@ -10,8 +10,8 @@ import {
 } from '../types';
 
 export const HERO_STATS = [
-  { label: 'TV Shows & Media', value: '10K+', highlight: 'National TV Expert' },
-  { label: 'Happy Clients', value: '50,000+', highlight: '45+ Countries' },
+  { label: 'Consultations Done', value: '50K+', highlight: 'Global Clients' },
+  { label: 'Countries Reached', value: '45+', highlight: 'Worldwide Network' },
   { label: 'Years Experience', value: '17+', highlight: 'Vedic Jyotish & Vastu' },
   { label: 'Accuracy & Trust', value: '98%', highlight: 'Kundli & D10 Precision' },
   { label: 'Google Rating', value: '4.9/5', highlight: '5,000+ Verified Reviews' },
@@ -85,51 +85,6 @@ export const SERVICE_BENEFITS: BenefitItem[] = [
     ],
     idealFor: 'Senior professionals stuck in the same band, bypassed for promotions, or dealing with unsupportive superiors.',
     planetaryKey: '11th House of Gains & Sun (Royal Power / Authority)'
-  },
-  {
-    id: 'business-vs-job',
-    title: 'Business vs. Job Decision (Entrepreneurship)',
-    shortDesc: 'Clear astrological clarity on whether you should continue salary employment or start your own venture, agency, or partnership.',
-    fullDesc: 'The 7th house (Partnership/Trade), 3rd house (Self-effort/Initiative), and Mercury (Commerce) determine entrepreneurial aptitude. We assess financial risk appetite in your birth chart before you invest hard-earned savings.',
-    iconName: 'Briefcase',
-    keyAspects: [
-      'Suitability for solo founder vs active partnership business',
-      'Optimal timing for company incorporation and brand launch',
-      'Capital funding periods and cash flow stability predictions',
-      'Whether side-hustle or full-time venture is safer'
-    ],
-    idealFor: 'Aspiring startup founders, freelancers transitioning to agency owners, and professionals with family business options.',
-    planetaryKey: '7th House (Business) vs 6th House (Job/Service)'
-  },
-  {
-    id: 'obstacles-remedies',
-    title: 'Career Obstacles & Practical Vedic Remedies',
-    shortDesc: 'Neutralize the adverse effects of Rahu-Ketu doshas, debilitated Saturn, Kemdrum, or weak 10th house lords with authentic Vedic remedies.',
-    fullDesc: 'Astrological remedies act as an umbrella in a planetary storm. We offer customized, actionable solutions including certified natural gemstones, personalized Beej Mantras, Rudraksha combinations, behavioral modifications, and workplace desk Vastu.',
-    iconName: 'ShieldCheck',
-    keyAspects: [
-      'Gemstone recommendations with weight, metal, and energization rituals',
-      'Mantra sadhana for overcoming persistent delays',
-      'Charity (Daan) alignments tailored to malefic planets',
-      'Workplace seating orientation and cabin Vastu corrections'
-    ],
-    idealFor: 'Individuals facing unexpected job losses, frequent probation extensions, legal hurdles, or continuous workplace friction.',
-    planetaryKey: 'Remedial Jyotish & Energy Harmonization'
-  },
-  {
-    id: 'kundli-dashamsha',
-    title: 'Personalized Kundli & D10 Dashamsha Deep Dive',
-    shortDesc: 'A microscopic evaluation of your D1 Lagna, D9 Navamsha, and D10 Dashamsha divisional charts for complete 5-year career forecasting.',
-    fullDesc: 'While the birth chart shows overall life potential, the D10 Dashamsha is the dedicated divisional chart of profession, reputation, and public legacy. We synthesize all planetary influences to provide a clear, confident career blueprint.',
-    iconName: 'Sparkles',
-    keyAspects: [
-      'Comprehensive 12-house career impact breakdown',
-      'Vimshottari Mahadasha, Antardasha, and Pratyantardasha scan',
-      'Planetary avasthas (degrees, dignity, combustion, retrogression)',
-      'Detailed written roadmap with action checklist'
-    ],
-    idealFor: 'Anyone seeking a thorough, scientific Vedic audit of their professional destiny with clear timelines.',
-    planetaryKey: 'D10 Divisional Chart & Dasha Timing Matrix'
   }
 ];
 
@@ -139,11 +94,6 @@ export const HOW_IT_WORKS_STEPS: ProcessStep[] = [
     title: 'Book Your Consultation',
     subtitle: 'Select Your Slot & Mode',
     description: 'Choose your preferred consultation format (Live Video Call, Confidential Phone Call, or Detailed Written Report) and select an available time slot.',
-    details: [
-      'Simple online booking form with instant confirmation',
-      'Flexible time slots accommodating global time zones',
-      'Secure payment processing & confidential data handling'
-    ],
     icon: 'Calendar'
   },
   {
@@ -151,11 +101,6 @@ export const HOW_IT_WORKS_STEPS: ProcessStep[] = [
     title: 'Share Exact Birth Details',
     subtitle: 'Date, Time & Place of Birth',
     description: 'Provide your Date of Birth, exact Time of Birth (with AM/PM), and City/Country of Birth. Mention your specific career questions or dilemmas.',
-    details: [
-      'Time-rectification assistance available if birth time is approximate',
-      'Specific questions on job switch, promotion, or business welcomed',
-      'Thorough pre-session chart calculation by Acharya Hanish Bagga'
-    ],
     icon: 'FileText'
   },
   {
@@ -163,11 +108,6 @@ export const HOW_IT_WORKS_STEPS: ProcessStep[] = [
     title: 'Get 1-on-1 Guidance & Roadmap',
     subtitle: 'Live Session + Proven Remedies',
     description: 'Connect directly with Acharya Hanish Bagga for an in-depth reading, straightforward answers to your career dilemmas, timing windows, and practical remedies.',
-    details: [
-      'Direct, compassionate 1-on-1 discussion without rushing',
-      'Clear timelines for next 12 to 36 months',
-      'Actionable remedies (Gemstones, Mantras, Habits, Vastu tips)'
-    ],
     icon: 'Sparkles'
   }
 ];

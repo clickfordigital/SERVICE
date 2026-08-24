@@ -6,13 +6,10 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { ServiceBenefits } from './components/ServiceBenefits';
 import { HowItWorks } from './components/HowItWorks';
 import { DeliverablesSection } from './components/DeliverablesSection';
-import { InteractiveCareerAnalyzer } from './components/InteractiveCareerAnalyzer';
-import { CareerHoroscopeCalculator } from './components/CareerHoroscopeCalculator';
 import { YouTubeVideoSection } from './components/YouTubeVideoSection';
 import { SeoContentGuide } from './components/SeoContentGuide';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
-import { InternalLinkingSection } from './components/InternalLinkingSection';
 import { ConversionCtaSection } from './components/ConversionCtaSection';
 import { ConsultationModal } from './components/ConsultationModal';
 import { StickyBottomCta } from './components/StickyBottomCta';
@@ -73,18 +70,7 @@ export default function App() {
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* 6. Interactive Vedic Career & House Explorer */}
-        <InteractiveCareerAnalyzer 
-          onOpenBooking={handleOpenBooking} 
-        />
-
-        {/* 7. Interactive Career Horoscope & Growth Calculator */}
-        <CareerHoroscopeCalculator 
-          onOpenBooking={handleOpenBooking} 
-          onOpenWhatsApp={handleOpenWhatsApp} 
-        />
-
-        {/* 8. YouTube Masterclasses & Video Guides Section */}
+        {/* 6. YouTube Masterclasses & Video Guides Section */}
         <YouTubeVideoSection 
           onOpenBooking={handleOpenBooking} 
           onOpenWhatsApp={handleOpenWhatsApp} 
@@ -104,12 +90,7 @@ export default function App() {
           onOpenWhatsApp={handleOpenWhatsApp} 
         />
 
-        {/* 10. Strategic Internal Linking Section */}
-        <InternalLinkingSection 
-          onOpenBooking={handleOpenBooking} 
-        />
-
-        {/* 11. Final Conversion CTA Section */}
+        {/* 10. Final Conversion CTA Section */}
         <ConversionCtaSection 
           onOpenBooking={handleOpenBooking} 
           onOpenWhatsApp={handleOpenWhatsApp} 

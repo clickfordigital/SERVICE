@@ -155,11 +155,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking, onOpenW
                   Celebrity Vedic Astrologer &amp; Vastu Shastra Mentor • 17+ Years of Experience
                 </p>
                 <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] text-[#FCEBD8]">
-                  <span className="bg-black/20 px-2 py-0.5 rounded border border-white/10 flex items-center gap-1">
-                    <Tv className="w-3 h-3 text-[#E5B869]" /> Zee News &amp; India TV Panellist
+                  <span className="bg-black/20 px-2.5 py-0.5 rounded border border-white/10 flex items-center gap-1">
+                    <Star className="w-3.5 h-3.5 text-[#E5B869] fill-[#E5B869]" /> 5.0 Google Rating (5,000+ Reviews)
                   </span>
-                  <span className="bg-black/20 px-2 py-0.5 rounded border border-white/10 flex items-center gap-1">
-                    <Star className="w-3 h-3 text-[#E5B869] fill-[#E5B869]" /> 5.0 Google Rating
+                  <span className="bg-black/20 px-2.5 py-0.5 rounded border border-white/10 flex items-center gap-1">
+                    <Award className="w-3.5 h-3.5 text-[#E5B869]" /> 17+ Years Vedic Jyotish Practice
                   </span>
                 </div>
               </div>

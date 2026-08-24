@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp })
             </a>
 
             <a 
-              href="#internal-links" 
+              href="#videos" 
               className="hover:text-[#854820] transition-colors relative py-1"
             >
               Courses
@@ -227,7 +227,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp })
               About
             </a>
             <a 
-              href="#internal-links" 
+              href="#videos" 
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 px-3 rounded-lg hover:bg-gray-100"
             >

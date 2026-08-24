@@ -28,10 +28,7 @@ interface ServiceBenefitsProps {
 }
 
 export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking }) => {
-  const [activeTab, setActiveTab] = useState<string>(SERVICE_BENEFITS[0].id);
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
-
-  const activeBenefit = SERVICE_BENEFITS.find(b => b.id === activeTab) || SERVICE_BENEFITS[0];
 
   return (
     <section id="service-benefits" className="py-16 sm:py-20 bg-white border-b border-[#EADBD0]">
@@ -51,8 +48,8 @@ export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking 
           </p>
         </div>
 
-        {/* 6 Benefit Cards in a Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 3 Core Benefit Cards in a Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {SERVICE_BENEFITS.map((benefit) => {
             const Icon = ICON_MAP[benefit.iconName] || Sparkles;
             const isExpanded = expandedCard === benefit.id;
@@ -61,11 +58,7 @@ export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking 
               <div
                 key={benefit.id}
                 id={`benefit-card-${benefit.id}`}
-                className={`rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between ${
-                  activeTab === benefit.id
-                    ? 'bg-[#FAF6F0] border-[#854820] shadow-[0_8px_30px_rgba(133,72,32,0.12)] ring-1 ring-[#854820]/30'
-                    : 'bg-[#FFFDF9] border-[#EBDCD0] hover:border-[#854820]/50 hover:shadow-md'
-                }`}
+                className="bg-[#FFFDF9] hover:bg-[#FAF6F0] rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] hover:border-[#854820]/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
