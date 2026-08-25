@@ -72,7 +72,7 @@ export const YouTubeVideoSection: React.FC<YouTubeVideoSectionProps> = ({ onOpen
               </div>
               <div>
                 <div className="text-xs font-bold text-[#854820] uppercase tracking-wide">Acharya Ganesh</div>
-                <div className="text-lg font-bold text-[#2C1E16]">500K+ Subscribers</div>
+                <div className="text-lg font-bold text-[#2C1E16]">155K+ Subscribers</div>
                 <div className="text-[11px] text-[#7A6B62]">10M+ Career Video Views</div>
               </div>
             </div>
