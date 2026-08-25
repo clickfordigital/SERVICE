@@ -1,5 +1,6 @@
 import React from 'react';
-import { Sparkles, Phone, Mail, MapPin, ShieldCheck, Heart } from 'lucide-react';
+import { Sparkles, Phone, Mail, MapPin, ShieldCheck, Heart, Palette } from 'lucide-react';
+import { useVedicTheme } from '../context/ThemeContext';
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -7,8 +8,10 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenWhatsApp }) => {
+  const { currentTheme, setIsCustomizerOpen } = useVedicTheme();
+
   return (
-    <footer className="bg-[#26140A] text-[#F2DFCE] pt-14 pb-24 md:pb-14 border-t border-[#4A2612]">
+    <footer className="bg-[#1C1008] text-[#F2DFCE] pt-14 pb-24 md:pb-14 border-t border-[#3D1E0C] transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top footer grid */}
@@ -17,15 +20,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenWhatsApp })
           {/* Col 1: Brand & Bio */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C68A2C] to-[#854820] flex items-center justify-center text-white font-serif font-bold text-lg">
-                HB
+              <div 
+                className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-serif font-bold text-lg shadow-sm"
+                style={{ backgroundColor: currentTheme.primary }}
+              >
+                AG
               </div>
               <div>
                 <span className="font-cinzel text-lg font-bold text-white tracking-wider block">
-                  ACHARYA HANISH BAGGA
+                  ACHARYA GANESH
                 </span>
-                <span className="text-[11px] text-[#C68A2C] font-semibold tracking-wide uppercase">
-                  Vedic Astrologer &amp; Vastu Master
+                <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: currentTheme.accentGold }}>
+                  Vedic Career Astrologer &amp; Mentor
                 </span>
               </div>
             </div>
@@ -66,7 +72,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenWhatsApp })
               <li><a href="#career-guide" className="hover:text-white transition-colors">Career Prediction by Date of Birth</a></li>
               <li><a href="#career-guide" className="hover:text-white transition-colors">10th House (Karma Bhava) Analysis</a></li>
               <li><a href="#career-guide" className="hover:text-white transition-colors">D10 Dashamsha Divisional Chart</a></li>
-              <li><a href="#career-explorer" className="hover:text-white transition-colors">Vimshottari Dasha Job Timing</a></li>
+              <li><a href="#how-it-works" className="hover:text-white transition-colors">Vimshottari Dasha Job Timing</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors">Astrology for Office Politics</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors">Gemstones for Career Success</a></li>
             </ul>
@@ -96,12 +102,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenWhatsApp })
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col gap-2">
               <button
                 onClick={onOpenBooking}
-                className="w-full py-2 bg-[#854820] hover:bg-[#A85A1D] text-white font-bold text-xs rounded-lg transition-colors cursor-pointer border border-[#C68A2C]/40"
+                className="w-full py-2.5 text-white font-bold text-xs rounded-xl transition-colors cursor-pointer border border-[#C68A2C]/40 shadow-xs"
+                style={{ backgroundColor: currentTheme.primary }}
               >
                 Book 1-on-1 Consultation
+              </button>
+
+              <button
+                onClick={() => setIsCustomizerOpen(true)}
+                className="w-full py-2 bg-white/10 hover:bg-white/15 text-white text-xs font-semibold rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer border border-white/15"
+              >
+                <Palette className="w-3.5 h-3.5 text-[#E5B869]" />
+                <span>Customize Vedic Theme</span>
               </button>
             </div>
           </div>

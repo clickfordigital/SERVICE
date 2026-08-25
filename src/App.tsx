@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import { AstrologicalThemeCustomizer } from './components/AstrologicalThemeCustomizer';
 import { JsonLdSchema } from './components/JsonLdSchema';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
@@ -7,6 +9,7 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { ServiceBenefits } from './components/ServiceBenefits';
 import { HowItWorks } from './components/HowItWorks';
 import { DeliverablesSection } from './components/DeliverablesSection';
+import { RotatingKundliShowcase } from './components/RotatingKundliShowcase';
 import { YouTubeVideoSection } from './components/YouTubeVideoSection';
 import { SeoContentGuide } from './components/SeoContentGuide';
 import { TestimonialsSection } from './components/TestimonialsSection';
@@ -35,92 +38,102 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-[#2C1E16] flex flex-col font-sans selection:bg-[#854820] selection:text-white">
-      {/* SEO JSON-LD Schema */}
-      <JsonLdSchema />
+    <ThemeProvider>
+      <div className="min-h-screen bg-[#FAF6F0] text-[#2C1E16] flex flex-col font-sans selection:bg-[#854820] selection:text-white transition-colors duration-500">
+        {/* SEO JSON-LD Schema */}
+        <JsonLdSchema />
 
-      {/* Sticky Header with Navigation & Quick Contact */}
-      <Header 
-        onOpenBooking={handleOpenBooking} 
-        onOpenWhatsApp={handleOpenWhatsApp}
-      />
+        {/* Sticky Header with Navigation & Quick Contact */}
+        <Header 
+          onOpenBooking={handleOpenBooking} 
+          onOpenWhatsApp={handleOpenWhatsApp}
+        />
 
-      {/* Main Career Astrology Content */}
-      <main className="flex-1">
-        {/* 1. Hero Section with Birth Detail Form */}
-        <HeroSection 
+        {/* Main Career Astrology Content */}
+        <main className="flex-1">
+          {/* 1. Hero Section with Birth Detail Form */}
+          <HeroSection 
+            onOpenBooking={handleOpenBooking} 
+            onOpenWhatsApp={handleOpenWhatsApp} 
+          />
+
+          {/* 2. Understanding Career Astrology (10th House, D10 Dashamsha) with Image Customizer */}
+          <AboutCareerAstrology 
+            onOpenBooking={handleOpenBooking} 
+            onOpenWhatsApp={handleOpenWhatsApp} 
+          />
+
+          {/* 3. Why Choose Us (17+ Yrs Exp, 50k+ Horoscopes, Practical Remedies) */}
+          <WhyChooseUs />
+
+          {/* 4. Core Service Benefits (Job Timing, Promotions, Business vs Job, Foreign Travel) */}
+          <ServiceBenefits 
+            onOpenBooking={handleOpenBooking} 
+          />
+
+          {/* 5. How It Works (Fully Animated Cosmic Astrolabe & 3 Simple Steps) */}
+          <HowItWorks 
+            onOpenBooking={handleOpenBooking} 
+          />
+
+          {/* 6. Consultation Deliverables with Sample Chart Preview & Image Customizer */}
+          <DeliverablesSection 
+            onOpenBooking={handleOpenBooking} 
+          />
+
+          {/* 7. Premium Personalized Kundli Showcase with Smooth Rolling Background Astrolabe Circle */}
+          <RotatingKundliShowcase 
+            onOpenBooking={handleOpenBooking} 
+          />
+
+          {/* 8. YouTube Masterclasses & Video Guides (155K Subscribers) */}
+          <YouTubeVideoSection 
+            onOpenBooking={handleOpenBooking} 
+            onOpenWhatsApp={handleOpenWhatsApp} 
+          />
+
+          {/* 8. Comprehensive SEO Career Astrology Guide with Kundli Chakra */}
+          <SeoContentGuide 
+            onOpenBooking={handleOpenBooking} 
+          />
+
+          {/* 9. Real Client Testimonials with Lagna/Rashi Badges */}
+          <TestimonialsSection />
+
+          {/* 10. Frequently Asked Questions */}
+          <FaqSection 
+            onOpenBooking={handleOpenBooking} 
+            onOpenWhatsApp={handleOpenWhatsApp} 
+          />
+
+          {/* 11. Conversion Call-To-Action */}
+          <ConversionCtaSection 
+            onOpenBooking={handleOpenBooking} 
+            onOpenWhatsApp={handleOpenWhatsApp} 
+          />
+        </main>
+
+        {/* Footer */}
+        <Footer 
           onOpenBooking={handleOpenBooking} 
           onOpenWhatsApp={handleOpenWhatsApp} 
         />
 
-        {/* 2. Understanding Career Astrology (10th House, D10 Dashamsha) */}
-        <AboutCareerAstrology 
+        {/* Mobile Sticky Quick Action Bar */}
+        <StickyBottomCta 
           onOpenBooking={handleOpenBooking} 
           onOpenWhatsApp={handleOpenWhatsApp} 
         />
 
-        {/* 3. Why Choose Us (17+ Yrs Exp, 50k+ Horoscopes, Practical Remedies) */}
-        <WhyChooseUs />
-
-        {/* 4. Core Service Benefits (Job Timing, Promotions, Business vs Job, Foreign Travel) */}
-        <ServiceBenefits 
-          onOpenBooking={handleOpenBooking} 
+        {/* Interactive Booking Modal */}
+        <ConsultationModal 
+          isOpen={isBookingModalOpen} 
+          onClose={handleCloseBooking} 
         />
 
-        {/* 5. How It Works (3 Simple Steps to Consultation) */}
-        <HowItWorks 
-          onOpenBooking={handleOpenBooking} 
-        />
-
-        {/* 6. Consultation Deliverables */}
-        <DeliverablesSection 
-          onOpenBooking={handleOpenBooking} 
-        />
-
-        {/* 7. YouTube Masterclasses & Video Guides */}
-        <YouTubeVideoSection 
-          onOpenBooking={handleOpenBooking} 
-          onOpenWhatsApp={handleOpenWhatsApp} 
-        />
-
-        {/* 8. Comprehensive SEO Career Astrology Guide */}
-        <SeoContentGuide 
-          onOpenBooking={handleOpenBooking} 
-        />
-
-        {/* 9. Real Client Testimonials */}
-        <TestimonialsSection />
-
-        {/* 10. Frequently Asked Questions */}
-        <FaqSection 
-          onOpenBooking={handleOpenBooking} 
-          onOpenWhatsApp={handleOpenWhatsApp} 
-        />
-
-        {/* 11. Conversion Call-To-Action */}
-        <ConversionCtaSection 
-          onOpenBooking={handleOpenBooking} 
-          onOpenWhatsApp={handleOpenWhatsApp} 
-        />
-      </main>
-
-      {/* Footer */}
-      <Footer 
-        onOpenBooking={handleOpenBooking} 
-        onOpenWhatsApp={handleOpenWhatsApp} 
-      />
-
-      {/* Mobile Sticky Quick Action Bar */}
-      <StickyBottomCta 
-        onOpenBooking={handleOpenBooking} 
-        onOpenWhatsApp={handleOpenWhatsApp} 
-      />
-
-      {/* Interactive Booking Modal */}
-      <ConsultationModal 
-        isOpen={isBookingModalOpen} 
-        onClose={handleCloseBooking} 
-      />
-    </div>
+        {/* Astrological & Theme Customizer Drawer Widget */}
+        <AstrologicalThemeCustomizer />
+      </div>
+    </ThemeProvider>
   );
 }
