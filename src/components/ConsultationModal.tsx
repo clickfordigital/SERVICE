@@ -207,12 +207,21 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-3 py-2.5 bg-[#F5EBE1] border border-[#E2D2C3] rounded-lg text-xs sm:text-sm text-[#2C1E16] focus:outline-none focus:ring-2 focus:ring-[#854820] focus:bg-white cursor-pointer"
                   >
-                    <option value="Career Path & Suitable Field Analysis">Career Path &amp; Suitable Field Analysis</option>
-                    <option value="Job Change Timing & Transition">Job Change Timing &amp; Transition</option>
-                    <option value="Promotion & Appraisal Prospects">Promotion &amp; Appraisal Prospects</option>
-                    <option value="Business vs Job Decision">Business vs Job Decision</option>
-                    <option value="Foreign Job Relocation / Visa">Foreign Job Relocation &amp; Visa</option>
-                    <option value="Career Obstacles & Vedic Remedies">Career Obstacles &amp; Vedic Remedies</option>
+                    <optgroup label="Health Astrology (Ayur-Jyotish)">
+                      <option value="Complete Medical Kundli & Vulnerability Mapping">Complete Medical Kundli &amp; Vulnerability Mapping</option>
+                      <option value="Surgery Muhurat & Medical Treatment Timing">Surgery Muhurat &amp; Medical Treatment Timing</option>
+                      <option value="Ayurvedic Tridosha & Prakriti Alignment">Ayurvedic Tridosha &amp; Prakriti Alignment</option>
+                      <option value="Chronic Health & 6th/8th House Dasha Reading">Chronic Health &amp; 6th/8th House Dasha Reading</option>
+                      <option value="Mental Peace, Stress & Sleep Restitution">Mental Peace, Stress &amp; Sleep Restitution</option>
+                    </optgroup>
+                    <optgroup label="Career Astrology">
+                      <option value="Career Path & Suitable Field Analysis">Career Path &amp; Suitable Field Analysis</option>
+                      <option value="Job Change Timing & Transition">Job Change Timing &amp; Transition</option>
+                      <option value="Promotion & Appraisal Prospects">Promotion &amp; Appraisal Prospects</option>
+                      <option value="Business vs Job Decision">Business vs Job Decision</option>
+                      <option value="Foreign Job Relocation / Visa">Foreign Job Relocation &amp; Visa</option>
+                      <option value="Career Obstacles & Vedic Remedies">Career Obstacles &amp; Vedic Remedies</option>
+                    </optgroup>
                   </select>
                 </div>
               </div>

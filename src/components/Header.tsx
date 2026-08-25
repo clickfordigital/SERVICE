@@ -1,14 +1,29 @@
 import React, { useState } from 'react';
-import { Phone, User, Menu, X, ChevronDown, Sparkles, BookOpen, ShoppingBag, Layers, PhoneCall } from 'lucide-react';
+import { Phone, User, Menu, X, ChevronDown, Sparkles, BookOpen, ShoppingBag, Layers, PhoneCall, HeartPulse, Briefcase } from 'lucide-react';
 
 interface HeaderProps {
   onOpenBooking: () => void;
   onOpenWhatsApp: () => void;
+  activeService?: 'career' | 'health';
+  onChangeService?: (service: 'career' | 'health') => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp }) => {
+export const Header: React.FC<HeaderProps> = ({ 
+  onOpenBooking, 
+  onOpenWhatsApp,
+  activeService = 'health',
+  onChangeService
+}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+
+  const handleSelectService = (srv: 'career' | 'health') => {
+    if (onChangeService) {
+      onChangeService(srv);
+    }
+    setServicesDropdownOpen(false);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#EAE6E1] shadow-xs font-sans transition-all">
@@ -177,15 +192,48 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp })
               Products
             </a>
 
-            {/* Services navigation */}
+            {/* Services navigation with Active Dropdown / Selector */}
             <div className="relative group">
-              <a 
-                href="#service-benefits" 
-                className="text-[#854820] font-bold transition-colors py-1 flex items-center gap-1 hover:text-[#5C2E11]"
+              <button 
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                className="text-[#854820] font-bold transition-colors py-1 flex items-center gap-1.5 hover:text-[#5C2E11] cursor-pointer"
               >
-                <span>Services</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#854820]"></span>
-              </a>
+                <span>Services ({activeService === 'health' ? 'Health Astrology' : 'Career Astrology'})</span>
+                <ChevronDown className="w-3.5 h-3.5" />
+              </button>
+
+              {/* Dropdown Menu for Services */}
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-[#EBDCD0] py-2 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
+                <button
+                  onClick={() => handleSelectService('health')}
+                  className={`w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-[#FAF6F0] transition-colors cursor-pointer ${
+                    activeService === 'health' ? 'bg-[#FAF6F0] text-[#854820] font-bold' : 'text-[#3D2314]'
+                  }`}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-[#854820]/10 text-[#854820] flex items-center justify-center shrink-0">
+                    <HeartPulse className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold leading-tight">Health Astrology (Active)</div>
+                    <div className="text-[10px] text-[#7A6B62]">Ayur-Jyotish &amp; Tridosha Timing</div>
+                  </div>
+                </button>
+
+                <button
+                  onClick={() => handleSelectService('career')}
+                  className={`w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-[#FAF6F0] transition-colors cursor-pointer ${
+                    activeService === 'career' ? 'bg-[#FAF6F0] text-[#854820] font-bold' : 'text-[#3D2314]'
+                  }`}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-[#854820]/10 text-[#854820] flex items-center justify-center shrink-0">
+                    <Briefcase className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold leading-tight">Career Astrology</div>
+                    <div className="text-[10px] text-[#7A6B62]">Job Timing &amp; D10 Dashamsha</div>
+                  </div>
+                </button>
+              </div>
             </div>
 
             <a 
@@ -240,13 +288,33 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp })
             >
               Products
             </a>
-            <a 
-              href="#service-benefits" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg bg-[#FAF6F0] text-[#854820] font-bold"
-            >
-              Services (Career Astrology)
-            </a>
+            <div className="py-2 px-3 bg-[#FAF6F0] rounded-xl border border-[#EBDCD0] space-y-2">
+              <div className="text-xs font-bold text-[#854820] uppercase tracking-wider">Select Service Page:</div>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => handleSelectService('health')}
+                  className={`py-2 px-2.5 rounded-lg text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 ${
+                    activeService === 'health'
+                      ? 'bg-[#854820] text-white shadow-xs'
+                      : 'bg-white text-[#3D2314] border border-[#E8DACD]'
+                  }`}
+                >
+                  <HeartPulse className="w-3.5 h-3.5" />
+                  <span>Health Astrology</span>
+                </button>
+                <button
+                  onClick={() => handleSelectService('career')}
+                  className={`py-2 px-2.5 rounded-lg text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 ${
+                    activeService === 'career'
+                      ? 'bg-[#854820] text-white shadow-xs'
+                      : 'bg-white text-[#3D2314] border border-[#E8DACD]'
+                  }`}
+                >
+                  <Briefcase className="w-3.5 h-3.5" />
+                  <span>Career Astrology</span>
+                </button>
+              </div>
+            </div>
             <a 
               href="#hero-lead-form" 
               onClick={() => setMobileMenuOpen(false)}
