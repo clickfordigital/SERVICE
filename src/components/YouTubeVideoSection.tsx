@@ -310,24 +310,7 @@ export const YouTubeVideoSection: React.FC<YouTubeVideoSectionProps> = ({ onOpen
 
         </div>
 
-        {/* Media & TV Features Bar */}
-        <div className="mt-14 pt-8 border-t border-[#E8DACD]">
-          <div className="text-center mb-6">
-            <span className="text-xs font-bold text-[#854820] uppercase tracking-wider">
-              As Seen On National Television &amp; Leading Media Platforms
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-80 grayscale hover:grayscale-0 transition-all">
-            {['Zee News', 'India TV', 'Aaj Tak', 'News18 India', 'ABP News'].map((channel, i) => (
-              <div key={i} className="flex items-center gap-2 font-serif font-bold text-sm sm:text-base text-[#4A3528]">
-                <div className="w-2 h-2 rounded-full bg-[#854820]"></div>
-                <span>{channel}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        {/* Bottom Container Spacing */}
       </div>
 
       {/* Video Modal Player */}
