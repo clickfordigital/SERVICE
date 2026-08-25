@@ -49,15 +49,9 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
                 Select Your Preferred Slot &amp; Consultation Mode
               </div>
 
-              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed space-y-2.5">
+              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed">
                 <p>
-                  Choose an available appointment and your preferred consultation option.
-                </p>
-                <p>
-                  Depending on available services, you can select a live video consultation, phone consultation or another listed consultation format.
-                </p>
-                <p>
-                  The purpose is to provide enough time to discuss your professional situation and complete your career astrology analysis without relying on a generic automated report.
+                  Choose an available appointment and your preferred consultation option. Depending on available services, you can select a live video consultation, phone consultation or another listed consultation format. The purpose is to provide enough time to discuss your professional situation and complete your career astrology analysis without relying on a generic automated report.
                 </p>
               </div>
             </div>
@@ -95,7 +89,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
                 Date, Exact Birth Time &amp; Place of Birth
               </div>
 
-              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed space-y-2">
+              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed space-y-2.5">
                 <p className="font-semibold text-[#3D2314]">Provide:</p>
                 <ul className="space-y-1.5 pl-0.5">
                   {[
@@ -113,11 +107,8 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
                   ))}
                 </ul>
 
-                <p className="pt-2 text-xs text-[#6B5B52] leading-relaxed">
-                  These details are used for career astrology by date of birth and preparation of your individual horoscope. Accurate birth time becomes especially important because career by date of birth and time analysis depends on correct house placement and divisional charts.
-                </p>
-                <p className="text-xs text-[#6B5B52] leading-relaxed">
-                  If you are seeking job astrology guidance, you can also mention whether your concern relates to unemployment, promotion, job security, switching companies, workplace problems or government employment.
+                <p className="pt-1.5 text-xs text-[#6B5B52] leading-relaxed">
+                  These details are used for career astrology by date of birth and preparation of your individual horoscope.
                 </p>
               </div>
             </div>
@@ -143,21 +134,15 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
               </div>
 
               <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] mb-1">
-                Receive Personalized Guidance
+                Receive Personalized Career Guidance
               </h3>
               <div className="text-xs font-semibold text-[#854820] uppercase tracking-wider mb-3.5">
                 Detailed Horoscope Reading &amp; Practical Roadmap
               </div>
 
-              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed space-y-2.5">
+              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed">
                 <p>
-                  During your session, Acharya Ganesh explains the planetary factors influencing your professional life and addresses your important questions.
-                </p>
-                <p>
-                  Your career horoscope by date of birth may include discussion around suitable professional directions, Dasha periods, job transitions, promotions, challenges, income development and other career-related patterns visible in your horoscope.
-                </p>
-                <p>
-                  Where relevant, practical astrological remedies may also be suggested.
+                  During your session, Acharya Ganesh explains the planetary factors influencing your professional life and addresses your important questions. Your career horoscope by date of birth may include discussion around suitable professional directions, Dasha periods, job transitions, promotions, challenges, income development and other career-related patterns visible in your horoscope.
                 </p>
               </div>
             </div>
@@ -175,11 +160,11 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
             onClick={onOpenBooking}
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#854820] hover:bg-[#663312] text-white font-bold text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer border border-[#A85A1D]"
           >
-            <span>Book Your Consultation Slot Now</span>
+            <span>Book Your Career Consultation</span>
             <ArrowRight className="w-4 h-4" />
           </button>
           <p className="text-xs text-[#7A6B62] mt-2">
-            Instant booking confirmation • Direct slot allocation with Acharya Ganesh
+            Instant booking confirmation • Direct consultation slot with Acharya Ganesh
           </p>
         </div>
 

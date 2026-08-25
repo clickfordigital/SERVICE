@@ -28,12 +28,12 @@ export const ConversionCtaSection: React.FC<ConversionCtaSectionProps> = ({ onOp
 
         {/* Big impactful heading */}
         <h2 className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight max-w-3xl mx-auto">
-          Take the First Step Towards a Fulfilling &amp; Prosperous Career
+          Take the First Step Towards a Fulfilling Career
         </h2>
 
         {/* Value subtext */}
         <p className="text-base sm:text-lg text-[#F7EFE8] max-w-2xl mx-auto font-light leading-relaxed">
-          Whether you are anticipating a crucial job switch, navigating workplace politics, or debating entrepreneurship, Acharya Hanish Bagga’s 17+ years of Vedic expertise will give you absolute clarity and timing.
+          Whether you are anticipating a crucial job switch, navigating workplace politics, or debating entrepreneurship, Acharya Hanish Bagga’s 17+ years of Vedic expertise will give you absolute clarity and timing
         </p>
 
         {/* Core Guarantees Pills */}

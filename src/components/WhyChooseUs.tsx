@@ -15,7 +15,7 @@ export const WhyChooseUs: React.FC = () => {
             Why Choose Our Career Astrology Services?
           </h2>
           <p className="text-base sm:text-lg text-[#6B5B52] mt-3.5 font-normal leading-relaxed">
-            Professional choices can impact financial earnings, security, self-assurance, family obligations and future development. The career astrology consultation is based on your horoscope rather than making general predictions on the basis of your zodiac sign.
+            Professional choices can impact financial earnings, security, self-assurance, family obligations and future development.
           </p>
         </div>
 
@@ -43,10 +43,12 @@ export const WhyChooseUs: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-5 pt-4 border-t border-[#F0E4D8] flex items-center justify-between text-xs font-semibold text-[#854820]">
-                  <span>{item.badge}</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C68A2C]"></span>
-                </div>
+                {item.badge ? (
+                  <div className="mt-5 pt-4 border-t border-[#F0E4D8] flex items-center justify-between text-xs font-semibold text-[#854820]">
+                    <span>{item.badge}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C68A2C]"></span>
+                  </div>
+                ) : null}
               </div>
             );
           })}

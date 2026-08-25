@@ -49,8 +49,6 @@ export const TestimonialsSection: React.FC = () => {
             { id: 'job-switch', label: 'Job Switch & Timing' },
             { id: 'promotion', label: 'Promotion & Growth' },
             { id: 'business', label: 'Business & Startups' },
-            { id: 'foreign', label: 'Abroad Relocation' },
-            { id: 'govt', label: 'Govt & Public Sector' },
           ].map((cat) => (
             <button
               key={cat.id}

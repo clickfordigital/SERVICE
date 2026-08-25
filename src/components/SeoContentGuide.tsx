@@ -20,10 +20,7 @@ export const SeoContentGuide: React.FC<SeoContentGuideProps> = ({ onOpenBooking 
             How Vedic Astrology Studies Your Professional Life
           </h2>
           <p className="text-base sm:text-lg text-[#6B5B52] mt-3.5 leading-relaxed font-normal">
-            Your career is influenced by education, skills, experience, choices, economic conditions, opportunities and personal effort. Vedic astrology provides an additional framework for understanding professional tendencies and timing through the birth chart.
-          </p>
-          <p className="text-sm text-[#854820] font-medium mt-2">
-            A complete career astrology analysis does not depend on a single planet or house. Multiple factors are studied together before drawing conclusions.
+            Your career is influenced by education, skills, experience, choices, economic conditions, opportunities and personal effort. Astrology provides an additional framework for understanding your profession.
           </p>
         </div>
 

@@ -108,17 +108,18 @@ export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking 
               <h4 className="font-serif-heading text-lg sm:text-xl font-bold text-[#3D2314]">
                 Unsure Which Career Service Matches Your Situation?
               </h4>
-              <p className="text-xs sm:text-sm text-[#6B5B52] mt-1 leading-relaxed max-w-2xl">
-                You do not need to diagnose your horoscope yourself. During a complete career astrology consultation, Acharya Ganesh can evaluate multiple professional questions within the same session and explain the major factors influencing your current situation.
-              </p>
+              <div className="text-xs sm:text-sm text-[#6B5B52] mt-1 leading-relaxed max-w-2xl space-y-1">
+                <p>You do not need to diagnose your horoscope yourself.</p>
+                <p>During a complete career astrology consultation, Acharya Ganesh can evaluate multiple professional questions within the same session and explain the major factors influencing your current situation.</p>
+              </div>
             </div>
           </div>
 
           <button
             onClick={onOpenBooking}
-            className="shrink-0 px-6 py-3 bg-[#854820] hover:bg-[#663312] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center gap-2"
+            className="shrink-0 px-6 py-3 bg-[#854820] hover:bg-[#663312] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center gap-2 whitespace-nowrap"
           >
-            <span>Consult Now</span>
+            <span>Book a 1-on-1 Career Consultation</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

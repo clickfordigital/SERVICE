@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import aboutCareerImage from '../assets/images/regenerated_image_1787641454539.jpg';
 import { 
   Compass, 
   Sparkles, 
@@ -22,7 +23,7 @@ interface AboutCareerAstrologyProps {
   onOpenWhatsApp: () => void;
 }
 
-const DEFAULT_IMAGE_URL = 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=1000&q=80';
+const DEFAULT_IMAGE_URL = aboutCareerImage;
 
 export const AboutCareerAstrology: React.FC<AboutCareerAstrologyProps> = ({
   onOpenBooking,
@@ -106,7 +107,7 @@ export const AboutCareerAstrology: React.FC<AboutCareerAstrologyProps> = ({
     {
       icon: ShieldCheck,
       title: 'Practical Vedic Remedies',
-      desc: 'Targeted gemstones, mantras, and remedies to remove roadblocks.'
+      desc: 'Targeted gemstones, mantras and remedies to remove roadblocks after chart analysis.'
     }
   ];
 
@@ -123,9 +124,6 @@ export const AboutCareerAstrology: React.FC<AboutCareerAstrologyProps> = ({
           <h2 className="font-serif-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#3D2314] tracking-tight">
             How Career Astrology Guides Your Journey
           </h2>
-          <p className="text-sm sm:text-base text-[#6B5B52] mt-2.5 font-normal leading-relaxed">
-            Vedic astrology maps your birth chart to uncover your core strengths, optimal timing, and the right career direction.
-          </p>
         </div>
 
         {/* Toast Alert */}
@@ -148,7 +146,7 @@ export const AboutCareerAstrology: React.FC<AboutCareerAstrologyProps> = ({
           <div className="lg:col-span-7 flex flex-col justify-between space-y-5">
             <div className="text-sm text-[#5A4A42] leading-relaxed">
               <p>
-                Your <strong className="text-[#3D2314]">Lagna</strong>, <strong className="text-[#3D2314]">10th House Lord</strong>, and planetary influences indicate where you thrive. A personalized chart reading helps you choose the right path and time your next move with confidence.
+                Your <strong className="text-[#3D2314]">Lagna</strong>, <strong className="text-[#3D2314]">10th House Lord</strong> and planetary influences indicate where you grow. A personalized birth chart reading helps you in choosing the right path and time your next move with clarity and confidence.
               </p>
             </div>
 
@@ -194,69 +192,35 @@ export const AboutCareerAstrology: React.FC<AboutCareerAstrologyProps> = ({
             </div>
           </div>
 
-          {/* Right Column: Relevant Career Service Image Frame with Equal Height Matching Left Column */}
-          <div className="lg:col-span-5 flex flex-col h-full">
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#2C1E16] border border-[#EBDCD0] shadow-xl group h-full min-h-[380px] lg:min-h-[480px] flex flex-col">
+          {/* Right Column: Relevant Career Service Image Frame with No Cropping */}
+          <div className="lg:col-span-5 flex items-center justify-center">
+            <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg group flex items-center justify-center">
+              <img
+                src={imageUrl}
+                alt={imageCaption}
+                referrerPolicy="no-referrer"
+                className="w-full h-auto max-h-[580px] object-contain rounded-2xl sm:rounded-3xl transition-transform duration-500 ease-out"
+              />
               
-              {/* Image Container with Full Height */}
-              <div className="relative w-full h-full min-h-full flex-1 overflow-hidden">
-                <img
-                  src={imageUrl}
-                  alt={imageCaption}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out absolute inset-0"
-                />
-                
-                {/* Gradient Overlay for Legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20 pointer-events-none"></div>
-
-                {/* Top Action Badge & Edit Trigger */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-auto">
-                  <span className="bg-[#854820]/90 backdrop-blur-xs text-[#FCEBD8] text-[11px] font-bold px-3 py-1 rounded-full border border-white/20 shadow-xs flex items-center gap-1.5">
-                    <Sparkles className="w-3 h-3 text-[#E5B869]" />
-                    <span>Career Astrology Analysis</span>
-                  </span>
-
-                  <div className="flex items-center gap-1.5">
-                    {isCustomized && (
-                      <button
-                        onClick={handleResetToDefault}
-                        className="bg-black/60 hover:bg-black/80 backdrop-blur-xs text-white p-1.5 rounded-lg text-xs transition-colors border border-white/20"
-                        title="Reset to default image"
-                      >
-                        <RotateCcw className="w-3.5 h-3.5" />
-                      </button>
-                    )}
-                    <button
-                      onClick={handleOpenEdit}
-                      className="bg-black/60 hover:bg-[#854820] backdrop-blur-xs text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all border border-white/20 flex items-center gap-1.5 cursor-pointer"
-                    >
-                      <ImageIcon className="w-3.5 h-3.5 text-[#E5B869]" />
-                      <span>{isCustomized ? 'Change' : 'Add / Edit Image'}</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Bottom Overlay Info & Service Highlights */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 text-white">
-                  <p className="text-xs text-[#E5B869] font-semibold uppercase tracking-wider mb-1.5">
-                    Kundli &amp; D10 Chart Guidance
-                  </p>
-                  <h3 className="text-base sm:text-xl font-serif font-bold text-white leading-snug">
-                    {imageCaption}
-                  </h3>
-                  <div className="mt-4 flex flex-wrap items-center gap-2.5 pt-3 border-t border-white/15 text-xs text-[#F7EFE8]">
-                    <span className="flex items-center gap-1">
-                      <Check className="w-3.5 h-3.5 text-[#E5B869]" /> 1-on-1 Personalized
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <Check className="w-3.5 h-3.5 text-[#E5B869]" /> Vedic Remedies Included
-                    </span>
-                  </div>
-                </div>
+              {/* Subtle Image Actions (Top-Right on hover/focus) */}
+              <div className="absolute top-4 right-4 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-auto">
+                {isCustomized && (
+                  <button
+                    onClick={handleResetToDefault}
+                    className="bg-black/70 hover:bg-black backdrop-blur-xs text-white p-2 rounded-xl text-xs transition-colors border border-white/20 shadow-md cursor-pointer"
+                    title="Reset to default image"
+                  >
+                    <RotateCcw className="w-4 h-4" />
+                  </button>
+                )}
+                <button
+                  onClick={handleOpenEdit}
+                  className="bg-black/70 hover:bg-[#854820] backdrop-blur-xs text-white p-2 rounded-xl text-xs font-semibold transition-all border border-white/20 flex items-center gap-1.5 shadow-md cursor-pointer"
+                  title="Change Image"
+                >
+                  <ImageIcon className="w-4 h-4 text-[#E5B869]" />
+                </button>
               </div>
-
             </div>
           </div>
 

@@ -18,23 +18,23 @@ export const HERO_STATS = [
 
 export const WHY_CHOOSE_ITEMS = [
   {
-    title: 'Expert Vedic Career Analysis',
+    title: 'Get Expert Vedic Career Analysis',
     description: 'Acharya Ganesh brings 17+ years of experience in studying professional patterns through Vedic astrology. Your 10th house, 6th house, 2nd house, 11th house, planetary strengths, Mahadasha, Antardasha and Dashamsha chart are examined for a detailed astrology career prediction.',
     badge: '17+ Years of Vedic Practice'
   },
   {
     title: 'Personalized Horoscope-Based Guidance',
-    description: "There's no such thing as a standard career path. Your consultation will be done using your Lagna chart, Moon chart, Dasha cycles, planetary positions and D10 Dashamsha. A detailed career horoscope by date of birth can be used to pinpoint your career tendencies, possible supportive industries, career trends, leadership skills and times to concentrate on.",
+    description: "There's no such thing as a standard career path. Your consultation will be done using your Lagna chart, Moon chart, Dasha cycles, planetary positions and D10 Dashamsha. A detailed career horoscope by date of birth can be used to pinpoint your career tendencies and times to concentrate on.",
     badge: '100% Personalized Kundli Analysis'
   },
   {
     title: 'Practical Direction Instead of Generic Answers',
-    description: 'The purpose of career astrology is not simply to say whether your career will be good or bad. The consultation focuses on questions you can actually act upon. You can discuss promotion timing, job changes, workplace difficulties, career breaks, professional studies, government employment, foreign opportunities, business decisions and other concerns. Where appropriate, practical Vedic remedies may also be discussed.',
+    description: 'The purpose of career astrology is not simply to say whether your career will be good or bad. The consultation focuses on questions you can actually act upon. You can discuss promotion timing, job changes, workplace difficulties, career breaks, professional studies and other concerns.',
     badge: 'Clear & Action-Oriented Guidance'
   },
   {
     title: 'Experience Across Different Career Situations',
-    description: 'Professionals, executives, entrepreneurs, students, job seekers, government aspirants and business owners may face completely different challenges. A detailed job astrology assessment allows the horoscope to be evaluated according to your current professional situation rather than through one standard interpretation.',
+    description: 'Professionals, executives, entrepreneurs, students, job seekers, government aspirants and business owners may face completely different challenges. A detailed job astrology assessment allows the horoscope to be evaluated according to your current professional situation.',
     badge: '50K+ Clients Guided'
   },
 ];
@@ -66,8 +66,7 @@ export const SERVICE_BENEFITS: BenefitItem[] = [
       'Understand whether staying or switching deserves stronger consideration.',
       'Assess periods connected with workplace stress or competition.',
       'Discuss delays in getting employment after repeated applications.',
-      'Analyze job security during restructuring or organizational changes.',
-      'Understand patterns affecting competitive exams or government employment.'
+      'Analyze job security during restructuring or organizational changes.'
     ],
     idealFor: 'Professionals contemplating job switch, facing employment delays, evaluating counter-offers, or preparing for competitive examinations.',
     planetaryKey: '6th House – Seva Bhava'
@@ -83,7 +82,6 @@ export const SERVICE_BENEFITS: BenefitItem[] = [
       'Understand possibilities for greater authority or leadership.',
       'Analyze professional networking and support from senior management.',
       'Identify periods requiring greater patience with office politics.',
-      'Evaluate income growth and professional recognition.',
       'Understand whether a role change may offer better long-term potential than waiting for an internal promotion.'
     ],
     idealFor: 'Senior professionals aiming for appraisals, leadership increments, overcoming workplace politics, and securing high-growth promotions.',
@@ -271,32 +269,6 @@ export const TESTIMONIALS: Testimonial[] = [
     date: 'December 2025',
     story: 'When I looked at my date of birth chart and calculated the astrology of my 6th, 7th, 10th and 11th houses, along with Mercury, Rahu and my chart, it was evident that my career had a significant scope for improvement and transition from the job to a business was best done at a specific time.',
     outcome: 'I had planned my exit, instead of exiting suddenly and I started the business at the recommended time. The consultation process assisted me in making a thoughtful decision with clarity between a job and entrepreneurship.',
-    verified: true
-  },
-  {
-    id: 'rev-4',
-    name: 'Dr. Ananya Sen',
-    role: 'Clinical Research Director',
-    location: 'London, United Kingdom',
-    companyOrDomain: 'Global Pharma Research',
-    category: 'foreign',
-    rating: 5,
-    date: 'November 2025',
-    story: 'My international job opportunity has been delayed several times because of documentation and visa issues. I was beginning to doubt whether the relocation would happen at all. Acharya Ganesh studied my career horoscope by date of birth together with the 9th, 10th and 12th houses and the relevant planetary periods. He explained the timing around foreign career movement and suggested simple remedies.',
-    outcome: 'The process started moving again during the period discussed in the consultation and I was eventually able to relocate for my new role. The career prediction astrology session helped me remain patient and plan the transition better.',
-    verified: true
-  },
-  {
-    id: 'rev-5',
-    name: 'Abhishek Shrivastava',
-    role: 'Deputy General Manager',
-    location: 'New Delhi, India',
-    companyOrDomain: 'Public Sector Enterprise',
-    category: 'govt',
-    rating: 5,
-    date: 'October 2025',
-    story: 'Facing department promotion delay from the last two years. I wanted to know whether I should continue trying for advancement or focus on another professional option. Acharya ji studied my Sun, Mars, Saturn, 6th house and 10th house through job astrology and career by date of birth and time analysis. He explained the stronger period for competitive professional progress and advised me to continue preparation.',
-    outcome: 'I cleared the promotion process and moved into a higher-responsibility role. The career astrology consultation gave me a clearer understanding of timing and helped me continue instead of giving up during a difficult phase.',
     verified: true
   }
 ];
