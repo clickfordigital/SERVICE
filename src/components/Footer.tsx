@@ -50,8 +50,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenWhatsApp })
               <li><a href="#service-benefits" className="hover:text-white transition-colors">Promotion &amp; Appraisal Guidance</a></li>
               <li><a href="#service-benefits" className="hover:text-white transition-colors">Business vs Job Decision</a></li>
               <li><a href="#service-benefits" className="hover:text-white transition-colors">Foreign Job &amp; Visa Astrology</a></li>
-              <li><a href="#internal-links" className="hover:text-white transition-colors">Workplace &amp; Commercial Vastu</a></li>
-              <li><a href="#internal-links" className="hover:text-white transition-colors">Corporate Numerology &amp; Name Check</a></li>
+              <li><a href="#career-image" className="hover:text-white transition-colors">Vedic Career Chart Analysis</a></li>
+              <li><a href="#what-you-get" className="hover:text-white transition-colors">Consultation Deliverables</a></li>
+              <li><a href="#videos" className="hover:text-white transition-colors">Astrology Video Masterclasses</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors">Vedic Remedies &amp; Gemstones</a></li>
             </ul>
           </div>
 

@@ -6,6 +6,7 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { ServiceBenefits } from './components/ServiceBenefits';
 import { HowItWorks } from './components/HowItWorks';
 import { DeliverablesSection } from './components/DeliverablesSection';
+import { CareerImageSection } from './components/CareerImageSection';
 import { YouTubeVideoSection } from './components/YouTubeVideoSection';
 import { SeoContentGuide } from './components/SeoContentGuide';
 import { TestimonialsSection } from './components/TestimonialsSection';
@@ -70,7 +71,13 @@ export default function App() {
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* 6. YouTube Masterclasses & Video Guides Section */}
+        {/* 6. Career Astrology Visual Spotlight Section */}
+        <CareerImageSection 
+          onOpenBooking={handleOpenBooking} 
+          onOpenWhatsApp={handleOpenWhatsApp} 
+        />
+
+        {/* 7. YouTube Masterclasses & Video Guides Section */}
         <YouTubeVideoSection 
           onOpenBooking={handleOpenBooking} 
           onOpenWhatsApp={handleOpenWhatsApp} 

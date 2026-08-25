@@ -177,11 +177,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp })
               Products
             </a>
 
-            {/* Services with active underline indicator since this is the Career Astrology Service page */}
+            {/* Services navigation */}
             <div className="relative group">
               <a 
                 href="#service-benefits" 
-                className="text-[#854820] font-bold transition-colors py-1 flex items-center gap-1"
+                className="text-[#854820] font-bold transition-colors py-1 flex items-center gap-1 hover:text-[#5C2E11]"
               >
                 <span>Services</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#854820]"></span>
