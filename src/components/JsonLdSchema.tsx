@@ -28,7 +28,7 @@ export const JsonLdSchema: React.FC = () => {
           'priceRange': '₹₹',
           'aggregateRating': {
             '@type': 'AggregateRating',
-            'ratingValue': '4.9',
+            'ratingValue': '5.0',
             'reviewCount': '5120',
             'bestRating': '5',
             'worstRating': '1'

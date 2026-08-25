@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { JsonLdSchema } from './components/JsonLdSchema';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
+import { AboutCareerAstrology } from './components/AboutCareerAstrology';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { ServiceBenefits } from './components/ServiceBenefits';
 import { HowItWorks } from './components/HowItWorks';
 import { DeliverablesSection } from './components/DeliverablesSection';
-import { CareerImageSection } from './components/CareerImageSection';
 import { YouTubeVideoSection } from './components/YouTubeVideoSection';
 import { SeoContentGuide } from './components/SeoContentGuide';
 import { TestimonialsSection } from './components/TestimonialsSection';
@@ -53,28 +53,28 @@ export default function App() {
           onOpenWhatsApp={handleOpenWhatsApp} 
         />
 
-        {/* 2. Why Choose Us - Exact 4 Cards from Screenshot */}
+        {/* 2. Understanding Career Astrology - Deep Explanation with Relevant Service Image */}
+        <AboutCareerAstrology 
+          onOpenBooking={handleOpenBooking} 
+          onOpenWhatsApp={handleOpenWhatsApp} 
+        />
+
+        {/* 3. Why Choose Us - Exact 4 Cards from Screenshot */}
         <WhyChooseUs />
 
-        {/* 3. Service Benefits - 6 Core Pillars of Career Astrology */}
+        {/* 4. Service Benefits - 6 Core Pillars of Career Astrology */}
         <ServiceBenefits 
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* 4. How It Works - 3 Step Process */}
+        {/* 5. How It Works - 3 Step Process */}
         <HowItWorks 
           onOpenBooking={handleOpenBooking} 
         />
 
-        {/* 5. What You'll Get - Consultation Deliverables */}
+        {/* 6. What You'll Get - Consultation Deliverables */}
         <DeliverablesSection 
           onOpenBooking={handleOpenBooking} 
-        />
-
-        {/* 6. Career Astrology Visual Spotlight Section */}
-        <CareerImageSection 
-          onOpenBooking={handleOpenBooking} 
-          onOpenWhatsApp={handleOpenWhatsApp} 
         />
 
         {/* 7. YouTube Masterclasses & Video Guides Section */}

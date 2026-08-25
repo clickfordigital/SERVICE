@@ -11,80 +11,83 @@ import {
 
 export const HERO_STATS = [
   { label: 'Consultations Done', value: '50K+', highlight: 'Global Clients' },
-  { label: 'Countries Reached', value: '45+', highlight: 'Worldwide Network' },
   { label: 'Years Experience', value: '17+', highlight: 'Vedic Jyotish & Vastu' },
   { label: 'Accuracy & Trust', value: '98%', highlight: 'Kundli & D10 Precision' },
-  { label: 'Google Rating', value: '4.9/5', highlight: '5,000+ Verified Reviews' },
+  { label: 'Google Rating', value: '5/5', highlight: '5,000+ Verified Reviews' },
 ];
 
 export const WHY_CHOOSE_ITEMS = [
   {
-    title: 'Expert Insights',
-    description: "Acharya Hanish Bagga's 17+ years of proven Vedic expertise in decoding career potential, Mahadasha, and Dashamsha (D10).",
-    badge: '17+ Yrs Vedic Practice'
+    title: 'Expert Vedic Career Analysis',
+    description: 'Acharya Ganesh brings 17+ years of experience in studying professional patterns through Vedic astrology. Your 10th house, 6th house, 2nd house, 11th house, planetary strengths, Mahadasha, Antardasha and Dashamsha chart are examined for a detailed astrology career prediction.',
+    badge: '17+ Years of Vedic Practice'
   },
   {
-    title: 'Personalized Guidance',
-    description: 'Every recommendation is customized using your exact Lagna Chart, Moon Sign, Navamsha, and D10 Dashamsha — never generic horoscopes.',
-    badge: '100% Tailored Kundli'
+    title: 'Personalized Horoscope-Based Guidance',
+    description: "There's no such thing as a standard career path. Your consultation will be done using your Lagna chart, Moon chart, Dasha cycles, planetary positions and D10 Dashamsha. A detailed career horoscope by date of birth can be used to pinpoint your career tendencies, possible supportive industries, career trends, leadership skills and times to concentrate on.",
+    badge: '100% Personalized Kundli Analysis'
   },
   {
-    title: 'Action-Oriented Remedies',
-    description: 'Practical, non-superstitious solutions including gemstone consultation, mantra alignment, behavioral remedies, and workplace Vastu.',
-    badge: 'Scientific & Practical'
+    title: 'Practical Direction Instead of Generic Answers',
+    description: 'The purpose of career astrology is not simply to say whether your career will be good or bad. The consultation focuses on questions you can actually act upon. You can discuss promotion timing, job changes, workplace difficulties, career breaks, professional studies, government employment, foreign opportunities, business decisions and other concerns. Where appropriate, practical Vedic remedies may also be discussed.',
+    badge: 'Clear & Action-Oriented Guidance'
   },
   {
-    title: 'Proven Track Record',
-    description: 'Over 50,000 professionals, executives, software engineers, and founders successfully guided towards promotions, dream switches, and stability.',
-    badge: '50K+ Career Transformations'
+    title: 'Experience Across Different Career Situations',
+    description: 'Professionals, executives, entrepreneurs, students, job seekers, government aspirants and business owners may face completely different challenges. A detailed job astrology assessment allows the horoscope to be evaluated according to your current professional situation rather than through one standard interpretation.',
+    badge: '50K+ Clients Guided'
   },
 ];
 
 export const SERVICE_BENEFITS: BenefitItem[] = [
   {
     id: 'career-path',
-    title: 'Career Path & Suitable Field Analysis',
-    shortDesc: 'Discover the exact industries and professional domains where your planetary combinations naturally guarantee maximum success and fulfillment.',
-    fullDesc: 'By analyzing the 10th house (Karma Bhava), its lord, planetary associations (Sun, Saturn, Mercury, Mars, Jupiter), and the D10 Dashamsha chart, we identify whether technology, civil services, corporate finance, creative arts, healthcare, or management will yield your greatest prosperity.',
+    title: 'Career Path & Suitable Profession Analysis',
+    shortDesc: 'One of the most important areas of study for professional direction, reputation, responsibilities, authority and long-term career development is the study of the 10th house.',
+    fullDesc: 'Career prediction astrology is analysed on the basis of the power of 10th house, its lord, planetary aspects, planetary conjunctions, Dashamsha placement and the ongoing Dasha periods are all studied together.',
     iconName: 'Compass',
     keyAspects: [
-      'Identification of natural talent and karmic aptitude',
-      'Govt vs Private vs MNC employment prospects',
-      'Ideal job roles matching planetary strengths',
-      'Specialized streams for higher studies and certifications'
+      'Know about fields of work which might be more suited to your innate abilities. Contrast options of private jobs, MNCs, government, self-employment and entrepreneurship.',
+      'Determine natural leadership, communication, analytical, technical, creative, advisory or management tendencies.',
+      'Know if your field is meeting your overall career goals.',
+      'Analyze significant professional learning, accountability and transition experiences.'
     ],
-    idealFor: 'College graduates, mid-career professionals seeking a directional pivot, or anyone feeling misaligned with their current job.',
-    planetaryKey: '10th House (Karma) & Sun / Mercury / Mars alignment'
+    idealFor: 'Students, graduates, and professionals seeking clarity on their most aligned industry, long-term vocation, and natural leadership strengths.',
+    planetaryKey: '10th House – Karma Bhava'
   },
   {
     id: 'job-change',
-    title: 'Job Change Timing & Transition Windows',
-    shortDesc: 'Know the precise months and planetary transits when switching jobs will bring salary leaps and seniority rather than insecurity.',
-    fullDesc: 'A premature job switch during an unfavorable Antardasha or Sade Sati transit can lead to regret, toxic environments, or sudden layoffs. We map out your favorable transit windows (Gochar of Jupiter & Saturn) to maximize offer packages and ease onboarding.',
+    title: 'Job Change, Employment & Competition Analysis',
+    shortDesc: 'Changing jobs at the wrong time can create unnecessary instability, while the right professional transition may open a stronger opportunity.',
+    fullDesc: 'A detailed career by date of birth and time analysis studies your 6th and 10th houses along with relevant Dasha periods and transits to understand the broader timing surrounding employment changes. This part of career astrology is especially useful when you have two or more professional options and cannot decide which path deserves priority.',
     iconName: 'CalendarClock',
     keyAspects: [
-      'High-probability months for interview calls and offers',
-      'Evaluation of counter-offers and resignation timing',
-      'Risk assessment for sudden corporate restructuring',
-      'Abroad job opportunities vs domestic transfers'
+      'Study supportive periods for job applications and interviews.',
+      'Understand whether staying or switching deserves stronger consideration.',
+      'Assess periods connected with workplace stress or competition.',
+      'Discuss delays in getting employment after repeated applications.',
+      'Analyze job security during restructuring or organizational changes.',
+      'Understand patterns affecting competitive exams or government employment.'
     ],
-    idealFor: 'Professionals contemplating resignation, actively interviewing, or awaiting international visa/relocation opportunities.',
-    planetaryKey: '6th (Service) & 10th House Transit + Dasha Bhukti'
+    idealFor: 'Professionals contemplating job switch, facing employment delays, evaluating counter-offers, or preparing for competitive examinations.',
+    planetaryKey: '6th House – Seva Bhava'
   },
   {
     id: 'promotion-growth',
-    title: 'Promotion, Appraisal & Leadership Prospects',
-    shortDesc: 'Unlock high-level managerial authority, salary increments, and leadership recognition by activating favorable planetary periods.',
-    fullDesc: 'The 11th house (Labha Bhava) governs gains and salary hikes, while the Sun and Mars govern executive authority. We determine when your promotion is due, how to overcome office politics, and how to gain appreciation from upper management.',
+    title: 'Promotion, Salary Growth & Recognition Prospects',
+    shortDesc: 'The 11th house in your birth chart represents gains, fulfillment of professional ambitions, professional networks, and recognition.',
+    fullDesc: 'Your career prediction includes an assessment of the 10th and 11th houses along with relevant planetary periods to understand potential phases of professional advancement and leadership elevation.',
     iconName: 'TrendingUp',
     keyAspects: [
-      'Timelines for appraisal cycles and leadership elevation',
-      'Neutralizing hidden rivals, jealous peers, and office politics',
-      'Building managerial charisma and executive presence',
-      'Enhancing performance consistency under stressful cycles'
+      'Study periods associated with appraisal and promotion opportunities.',
+      'Understand possibilities for greater authority or leadership.',
+      'Analyze professional networking and support from senior management.',
+      'Identify periods requiring greater patience with office politics.',
+      'Evaluate income growth and professional recognition.',
+      'Understand whether a role change may offer better long-term potential than waiting for an internal promotion.'
     ],
-    idealFor: 'Senior professionals stuck in the same band, bypassed for promotions, or dealing with unsupportive superiors.',
-    planetaryKey: '11th House of Gains & Sun (Royal Power / Authority)'
+    idealFor: 'Senior professionals aiming for appraisals, leadership increments, overcoming workplace politics, and securing high-growth promotions.',
+    planetaryKey: '11th House – Labha Bhava'
   }
 ];
 
@@ -92,22 +95,30 @@ export const HOW_IT_WORKS_STEPS: ProcessStep[] = [
   {
     stepNumber: '01',
     title: 'Book Your Consultation',
-    subtitle: 'Select Your Slot & Mode',
-    description: 'Choose your preferred consultation format (Live Video Call, Confidential Phone Call, or Detailed Written Report) and select an available time slot.',
+    subtitle: 'Select Your Preferred Slot & Consultation Mode',
+    description: 'Choose an available appointment and your preferred consultation option. Depending on available services, you can select a live video consultation, phone consultation or another listed consultation format.\n\nThe purpose is to provide enough time to discuss your professional situation and complete your career astrology analysis without relying on a generic automated report.',
     icon: 'Calendar'
   },
   {
     stepNumber: '02',
-    title: 'Share Exact Birth Details',
-    subtitle: 'Date, Time & Place of Birth',
-    description: 'Provide your Date of Birth, exact Time of Birth (with AM/PM), and City/Country of Birth. Mention your specific career questions or dilemmas.',
+    title: 'Share Your Correct Birth Details',
+    subtitle: 'Date, Exact Birth Time & Place of Birth',
+    description: 'Provide your accurate birth details and career context for horoscope preparation:',
+    details: [
+      'Date of birth',
+      'Accurate time of birth',
+      'City and country of birth',
+      'Current profession',
+      'Major career concerns',
+      'Any specific decision you are considering'
+    ],
     icon: 'FileText'
   },
   {
     stepNumber: '03',
-    title: 'Get 1-on-1 Guidance & Roadmap',
-    subtitle: 'Live Session + Proven Remedies',
-    description: 'Connect directly with Acharya Hanish Bagga for an in-depth reading, straightforward answers to your career dilemmas, timing windows, and practical remedies.',
+    title: 'Receive Personalized Career Guidance',
+    subtitle: 'Detailed Horoscope Reading & Practical Roadmap',
+    description: 'During your session, Acharya Ganesh explains the planetary factors influencing your professional life and addresses your important questions.\n\nYour career horoscope by date of birth may include discussion around suitable professional directions, Dasha periods, job transitions, promotions, challenges, income development and other career-related patterns visible in your horoscope. Where relevant, practical astrological remedies may also be suggested.',
     icon: 'Sparkles'
   }
 ];
@@ -116,73 +127,57 @@ export const WHAT_YOULL_GET_DELIVERABLES: DeliverableItem[] = [
   {
     id: 'deliv-1',
     title: 'Personalized Career Roadmap',
-    description: 'A structured 3 to 5-year outlook detailing your planetary career trajectory, peak earning periods, and potential consolidation phases.',
-    badge: '3-5 Year Horizon',
-    included: [
-      'Complete 10th House & D10 analysis',
-      'Peak recognition & earning cycles',
-      'Strategic guidance for career milestones'
-    ],
+    description: 'Understand the broader direction of your professional journey and the areas where your chart shows stronger potential.',
+    badge: 'Strategic Direction',
+    included: [],
     icon: 'Compass'
   },
   {
     id: 'deliv-2',
-    title: 'Job Change Timing Windows',
-    description: 'Exact months when planetary transits support smooth resignations, salary jumps, and positive transitions without career gaps.',
-    badge: 'Accurate Timing',
-    included: [
-      'Favorable months for applications & interviews',
-      'Periods to avoid impulsive resignations',
-      'Domestic vs Overseas transition prospects'
-    ],
+    title: 'Job Change Timing',
+    description: 'Your career prediction astrology analysis can identify planetary periods that may be more supportive or demanding for professional transitions.',
+    badge: 'Timing Analysis',
+    included: [],
     icon: 'CalendarCheck'
   },
   {
     id: 'deliv-3',
-    title: 'Promotion & Appraisal Probability',
-    description: 'Analysis of your 11th House (Income/Gains) and 10th House (Status) to pinpoint the exact appraisal cycle when salary hikes are highest.',
-    badge: 'Growth Forecast',
-    included: [
-      'Anticipated promotion timelines',
-      'Overcoming managerial friction & biases',
-      'Maximizing financial increments & bonuses'
-    ],
+    title: 'Promotion & Appraisal Prospects',
+    description: 'Understand the astrological factors connected with professional recognition, additional responsibilities, leadership opportunities and salary development.',
+    badge: 'Growth & Authority',
+    included: [],
     icon: 'TrendingUp'
   },
   {
     id: 'deliv-4',
-    title: 'Most Suitable Career Fields',
-    description: 'A pinpointed list of corporate domains, tech stacks, industries, or business sectors aligned with your natural planetary dignity.',
-    badge: 'Industry Alignment',
-    included: [
-      'Job vs Startup/Business feasibility rating',
-      'High-growth niche sectors for your chart',
-      'Government vs Corporate vs Creative avenues'
-    ],
+    title: 'Suitable Professional Fields',
+    description: 'Your horoscope can be studied to identify professions and working environments that may align better with your natural planetary strengths.',
+    badge: 'Field Alignment',
+    included: [],
     icon: 'Target'
   },
   {
     id: 'deliv-5',
-    title: 'In-Depth Planetary & D10 Breakdown',
-    description: 'Transparent explanation of your active Mahadasha, Antardasha, and the dignity of Saturn, Sun, Jupiter, and Mercury.',
-    badge: 'Technical Jyotish',
-    included: [
-      'Vimshottari Dasha system breakdown',
-      'Dashamsha (D10) divisional chart insights',
-      'Sade Sati, Dhaiya, or Rahu transit mitigation'
-    ],
+    title: 'D1 & D10 Career Analysis',
+    description: 'Detailed astrology career prediction considers the main birth chart together with the Dashamsha and important planetary periods instead of depending on one isolated placement.',
+    badge: 'D1 & D10 Charts',
+    included: [],
     icon: 'Layers'
   },
   {
     id: 'deliv-6',
-    title: 'Practical, Non-Superstitious Remedies',
-    description: 'Customized action steps including certified natural gemstones, personalized Beej Mantras, workplace desk Vastu, and daily rituals.',
-    badge: 'Actionable Solutions',
-    included: [
-      'Gemstone recommendation with metal & finger rules',
-      'Practical behavioral & habit adjustments',
-      'Desk orientation & workplace energy enhancements'
-    ],
+    title: 'Career Challenges & Workplace Patterns',
+    description: 'Know from the astrological point of view, recurring professional difficulties/differences, stalled progress, instability and discontent.',
+    badge: 'Obstacle Mitigation',
+    included: [],
+    icon: 'ShieldCheck'
+  },
+  {
+    id: 'deliv-7',
+    title: 'Practical Vedic Remedies',
+    description: 'In case of appropriate, remedies can be given as mantra, behavioral guidance, gemstone as per proper horoscope evaluation or Vastu related suggestions etc.',
+    badge: 'Actionable Remedies',
+    included: [],
     icon: 'Sparkles'
   }
 ];
@@ -248,8 +243,8 @@ export const TESTIMONIALS: Testimonial[] = [
     category: 'job-switch',
     rating: 5,
     date: 'February 2026',
-    story: 'I was stuck in the same position for 4 years with minimal increments despite stellar reviews. Acharya Hanish Bagga analyzed my D10 chart and accurately predicted a Mahadasha transition in November. He advised me strictly against switching in August and gave me specific timing for November.',
-    outcome: 'Switched in December 2025 with a 65% salary hike and leadership role at a top US fintech firm. His timing accuracy was astonishing.',
+    story: 'Salary and destination have hardly changed since the last four years, even regardless of good reviews. I studied my D10 chart, current Dasha and upcoming periods and got some good insights from Acharya Ganesh about the time that would be more favourable for me to move to another job.',
+    outcome: 'Changing jobs during the recommended time frame and advancing to a more fulfilling position with greater challenge and higher pay. Here is the reason I was able to wait for the right job because the career prediction had given me enough confidence to do so.',
     verified: true
   },
   {
@@ -261,8 +256,8 @@ export const TESTIMONIALS: Testimonial[] = [
     category: 'promotion',
     rating: 5,
     date: 'January 2026',
-    story: 'Facing intense corporate politics and unsupportive management, I felt my career was stalling. Acharya ji pointed out an active Rahu transit affecting my 10th house and suggested practical remedial gemstones and daily desk Vastu alignment.',
-    outcome: 'Within 3 months of the consultation and remedies, the organizational restructuring favored my department and I was promoted to Vice President.',
+    story: 'During consultation, Acharya ji analyzed my career prediction astrology 10th house, Dasha periods and Rahu influence and told me that going back to work with such difficult times and pressure from seniors, etc. was short-lived and he gave me some tips for doing so as well as some patience in my career.',
+    outcome: "In the next couple of months there was a big organizational change here and I was offered a better leadership position. I've avoided an emotional resignation at the wrong time by following the astrology career prediction.",
     verified: true
   },
   {
@@ -274,8 +269,8 @@ export const TESTIMONIALS: Testimonial[] = [
     category: 'business',
     rating: 5,
     date: 'December 2025',
-    story: 'I was torn between staying in my 35 LPA corporate job or committing fully to my logistics startup. Acharya Hanish Bagga decoded my 7th house and Mercury strength, advising me on the exact auspicious month to register and launch.',
-    outcome: 'We closed our Seed Round funding right in the predicted auspicious quarter. His guidance gave me unshakeable clarity.',
+    story: 'When I looked at my date of birth chart and calculated the astrology of my 6th, 7th, 10th and 11th houses, along with Mercury, Rahu and my chart, it was evident that my career had a significant scope for improvement and transition from the job to a business was best done at a specific time.',
+    outcome: 'I had planned my exit, instead of exiting suddenly and I started the business at the recommended time. The consultation process assisted me in making a thoughtful decision with clarity between a job and entrepreneurship.',
     verified: true
   },
   {
@@ -287,8 +282,8 @@ export const TESTIMONIALS: Testimonial[] = [
     category: 'foreign',
     rating: 5,
     date: 'November 2025',
-    story: 'My international relocation visa was delayed multiple times, creating extreme anxiety. Acharya Bagga performed a deep Kundli check, identified the 9th and 12th house planetary blockages, and provided specific mantras and energized gemstone guidance.',
-    outcome: 'My Tier-2 visa cleared smoothly within 6 weeks, and I relocated to London with full sponsorship.',
+    story: 'My international job opportunity has been delayed several times because of documentation and visa issues. I was beginning to doubt whether the relocation would happen at all. Acharya Ganesh studied my career horoscope by date of birth together with the 9th, 10th and 12th houses and the relevant planetary periods. He explained the timing around foreign career movement and suggested simple remedies.',
+    outcome: 'The process started moving again during the period discussed in the consultation and I was eventually able to relocate for my new role. The career prediction astrology session helped me remain patient and plan the transition better.',
     verified: true
   },
   {
@@ -300,8 +295,8 @@ export const TESTIMONIALS: Testimonial[] = [
     category: 'govt',
     rating: 5,
     date: 'October 2025',
-    story: 'Departmental promotion exams had stalled for 2 years. Acharya ji analyzed my Sun and Mars placements, predicting a breakthrough in late autumn. His genuine, calm, and scientific demeanor gave me tremendous confidence.',
-    outcome: 'Cleared the promotion board in first list and received transfer to preferred regional headquarters.',
+    story: 'Facing department promotion delay from the last two years. I wanted to know whether I should continue trying for advancement or focus on another professional option. Acharya ji studied my Sun, Mars, Saturn, 6th house and 10th house through job astrology and career by date of birth and time analysis. He explained the stronger period for competitive professional progress and advised me to continue preparation.',
+    outcome: 'I cleared the promotion process and moved into a higher-responsibility role. The career astrology consultation gave me a clearer understanding of timing and helped me continue instead of giving up during a difficult phase.',
     verified: true
   }
 ];

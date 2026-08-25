@@ -157,7 +157,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenWhatsApp })
             </a>
 
             <a 
-              href="#why-choose" 
+              href="#about-career-astrology" 
               className="hover:text-[#854820] transition-colors relative py-1"
             >
               About

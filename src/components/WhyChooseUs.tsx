@@ -12,10 +12,10 @@ export const WhyChooseUs: React.FC = () => {
         {/* Section Heading matching screenshot */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-serif-heading text-3xl sm:text-4xl lg:text-4xl font-bold text-[#3D2314] tracking-tight">
-            Why Choose Our Services?
+            Why Choose Our Career Astrology Services?
           </h2>
-          <p className="text-base sm:text-lg text-[#6B5B52] mt-3 font-normal">
-            Expert consultation and proven solutions to bring clarity and growth to your career.
+          <p className="text-base sm:text-lg text-[#6B5B52] mt-3.5 font-normal leading-relaxed">
+            Professional choices can impact financial earnings, security, self-assurance, family obligations and future development. The career astrology consultation is based on your horoscope rather than making general predictions on the basis of your zodiac sign.
           </p>
         </div>
 

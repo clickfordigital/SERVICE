@@ -110,63 +110,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking, onOpenW
               <span>Vedic Jyotish &amp; D10 Dashamsha Career Blueprint</span>
             </div>
 
-            {/* Main Primary H1 Heading - Exact and SEO Optimized */}
+            {/* Main Primary H1 Heading */}
             <h1 className="font-serif-heading text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-[1.18]">
               Get Clear Career Direction &amp; Overcome Job Uncertainty
             </h1>
 
-            {/* Core Value Proposition Paragraph */}
-            <p className="text-base sm:text-lg text-[#F7EFE8] leading-relaxed max-w-2xl font-light">
-              Stuck in your job? Unsure about career growth or promotion? Astrology can reveal 
-              the right path, the best timing, and remedies for success. With your Birth Chart 
-              as a Guide, we help you make smart decisions, grab opportunities, and build a stable future.
-            </p>
-
-            {/* Bold Sub-hook matching screenshot */}
-            <div className="border-l-2 border-[#E5B869] pl-3 py-1 bg-black/10 rounded-r-md">
-              <p className="text-xs sm:text-sm font-bold text-[#FCEBD8] tracking-wide uppercase">
-                CAREER ASTROLOGY: UNLOCK GROWTH, STABILITY &amp; THE RIGHT PATH TO SUCCESS.
+            {/* Core Value Proposition Paragraphs */}
+            <div className="space-y-3 text-base sm:text-lg text-[#F7EFE8] leading-relaxed max-w-2xl font-light">
+              <p className="font-normal text-white">
+                Sick of your current position? Choosing between promotion, a job change, government work or business?
+              </p>
+              <p>
+                Career astrology is the interpretation of your natal chart to know your strengths in your career, tough times, appropriate career paths and the best timing in your career life.
+              </p>
+              <p>
+                A customized career forecast may offer another viewpoint into your current stage and future opportunities rather than an important decision just being made due to stress or uncertainty.
               </p>
             </div>
 
-            {/* Acharya Hanish Bagga Profile Preview Card */}
-            <div className="p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <div className="relative shrink-0">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#E5B869] to-[#854820] p-1 shadow-md">
-                  <div className="w-full h-full rounded-full bg-[#5D2E12] flex items-center justify-center text-white text-2xl font-bold font-serif overflow-hidden">
-                    <span className="font-serif-heading text-2xl tracking-wider text-[#FCEBD8]">HB</span>
-                  </div>
-                </div>
-                <div className="absolute -bottom-1 -right-1 bg-[#C68A2C] text-[#2C1E16] text-[10px] font-extrabold px-1.5 py-0.5 rounded-full border border-white flex items-center gap-0.5">
-                  <Award className="w-3 h-3" /> Expert
-                </div>
-              </div>
-
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="text-lg font-bold text-white font-cinzel tracking-wide">
-                    Acharya Hanish Bagga
-                  </h2>
-                  <span className="bg-[#25D366]/20 border border-[#25D366]/40 text-[#A7F3D0] text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span> Available Today
-                  </span>
-                </div>
-                <p className="text-xs text-[#E6D7C8] mt-0.5">
-                  Celebrity Vedic Astrologer &amp; Vastu Shastra Mentor • 17+ Years of Experience
-                </p>
-                <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] text-[#FCEBD8]">
-                  <span className="bg-black/20 px-2.5 py-0.5 rounded border border-white/10 flex items-center gap-1">
-                    <Star className="w-3.5 h-3.5 text-[#E5B869] fill-[#E5B869]" /> 5.0 Google Rating (5,000+ Reviews)
-                  </span>
-                  <span className="bg-black/20 px-2.5 py-0.5 rounded border border-white/10 flex items-center gap-1">
-                    <Award className="w-3.5 h-3.5 text-[#E5B869]" /> 17+ Years Vedic Jyotish Practice
-                  </span>
-                </div>
-              </div>
+            {/* Sub-hook Banner */}
+            <div className="border-l-2 border-[#E5B869] pl-3 py-1 bg-black/10 rounded-r-md">
+              <p className="text-xs sm:text-sm font-bold text-[#FCEBD8] tracking-wide">
+                Career Astrology: Discovering Your Career Path, Timing &amp; Career Potential
+              </p>
             </div>
 
             {/* Trust Metric Stats Grid - Exact replica & refinement of screenshot */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-2">
               {HERO_STATS.map((stat, idx) => (
                 <div 
                   key={idx}
