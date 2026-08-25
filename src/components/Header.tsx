@@ -1,29 +1,16 @@
 import React, { useState } from 'react';
-import { Phone, User, Menu, X, ChevronDown, Sparkles, BookOpen, ShoppingBag, Layers, PhoneCall, HeartPulse, Briefcase } from 'lucide-react';
+import { Phone, User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   onOpenBooking: () => void;
   onOpenWhatsApp: () => void;
-  activeService?: 'career' | 'health';
-  onChangeService?: (service: 'career' | 'health') => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ 
   onOpenBooking, 
-  onOpenWhatsApp,
-  activeService = 'health',
-  onChangeService
+  onOpenWhatsApp 
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-
-  const handleSelectService = (srv: 'career' | 'health') => {
-    if (onChangeService) {
-      onChangeService(srv);
-    }
-    setServicesDropdownOpen(false);
-    setMobileMenuOpen(false);
-  };
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#EAE6E1] shadow-xs font-sans transition-all">
@@ -33,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
           
           {/* Logo on Left */}
           <a href="#" className="flex items-center gap-3 group">
-            {/* Authentic circular Acharya emblem logo matching the screenshot */}
+            {/* Authentic circular Acharya emblem logo */}
             <div className="relative flex items-center justify-center">
               <div className="w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center">
                 {/* Mandala / Sun wheel outer ring */}
@@ -60,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
                   {/* Inner golden halo */}
                   <circle cx="50" cy="46" r="28" fill="#FCE8CF" stroke="#D49B45" strokeWidth="1.5" />
                   
-                  {/* Meditating Acharya icon silhouette / graphic */}
+                  {/* Meditating Acharya icon silhouette */}
                   <g transform="translate(24, 22) scale(0.52)">
                     {/* Head with Topknot (Shikha) */}
                     <ellipse cx="50" cy="22" rx="10" ry="12" fill="#854820" />
@@ -159,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* BOTTOM ROW: Centered Navigation Links matching screenshot */}
+      {/* BOTTOM ROW: Navigation Links */}
       <div className="hidden lg:block border-t border-[#F0EBE4] bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-center space-x-12 py-3.5 text-[15px] font-semibold text-[#1F2937]">
@@ -179,75 +166,45 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
 
             <a 
-              href="#videos" 
+              href="#service-benefits" 
+              className="hover:text-[#854820] transition-colors relative py-1 text-[#854820] font-bold"
+            >
+              Career Services
+            </a>
+
+            <a 
+              href="#how-it-works" 
               className="hover:text-[#854820] transition-colors relative py-1"
             >
-              Courses
+              How It Works
             </a>
 
             <a 
               href="#what-you-get" 
               className="hover:text-[#854820] transition-colors relative py-1"
             >
-              Products
+              Deliverables
             </a>
 
-            {/* Services navigation with Active Dropdown / Selector */}
-            <div className="relative group">
-              <button 
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className="text-[#854820] font-bold transition-colors py-1 flex items-center gap-1.5 hover:text-[#5C2E11] cursor-pointer"
-              >
-                <span>Services ({activeService === 'health' ? 'Health Astrology' : 'Career Astrology'})</span>
-                <ChevronDown className="w-3.5 h-3.5" />
-              </button>
+            <a 
+              href="#videos" 
+              className="hover:text-[#854820] transition-colors relative py-1"
+            >
+              Masterclasses
+            </a>
 
-              {/* Dropdown Menu for Services */}
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-[#EBDCD0] py-2 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
-                <button
-                  onClick={() => handleSelectService('health')}
-                  className={`w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-[#FAF6F0] transition-colors cursor-pointer ${
-                    activeService === 'health' ? 'bg-[#FAF6F0] text-[#854820] font-bold' : 'text-[#3D2314]'
-                  }`}
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[#854820]/10 text-[#854820] flex items-center justify-center shrink-0">
-                    <HeartPulse className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold leading-tight">Health Astrology (Active)</div>
-                    <div className="text-[10px] text-[#7A6B62]">Ayur-Jyotish &amp; Tridosha Timing</div>
-                  </div>
-                </button>
-
-                <button
-                  onClick={() => handleSelectService('career')}
-                  className={`w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-[#FAF6F0] transition-colors cursor-pointer ${
-                    activeService === 'career' ? 'bg-[#FAF6F0] text-[#854820] font-bold' : 'text-[#3D2314]'
-                  }`}
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[#854820]/10 text-[#854820] flex items-center justify-center shrink-0">
-                    <Briefcase className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold leading-tight">Career Astrology</div>
-                    <div className="text-[10px] text-[#7A6B62]">Job Timing &amp; D10 Dashamsha</div>
-                  </div>
-                </button>
-              </div>
-            </div>
+            <a 
+              href="#faq" 
+              className="hover:text-[#854820] transition-colors relative py-1"
+            >
+              FAQs
+            </a>
 
             <a 
               href="#hero-lead-form" 
               className="hover:text-[#854820] transition-colors relative py-1"
             >
-              Contact
-            </a>
-
-            <a 
-              href="#career-guide" 
-              className="hover:text-[#854820] transition-colors relative py-1"
-            >
-              Blogs
+              Book Consultation
             </a>
 
           </nav>
@@ -268,66 +225,53 @@ export const Header: React.FC<HeaderProps> = ({
               Home
             </a>
             <a 
-              href="#why-choose" 
+              href="#about-career-astrology" 
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 px-3 rounded-lg hover:bg-gray-100"
             >
               About
             </a>
             <a 
-              href="#videos" 
+              href="#service-benefits" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 px-3 rounded-lg hover:bg-gray-100 text-[#854820] font-bold"
+            >
+              Career Services
+            </a>
+            <a 
+              href="#how-it-works" 
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 px-3 rounded-lg hover:bg-gray-100"
             >
-              Courses
+              How It Works
             </a>
             <a 
               href="#what-you-get" 
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 px-3 rounded-lg hover:bg-gray-100"
             >
-              Products
+              Deliverables
             </a>
-            <div className="py-2 px-3 bg-[#FAF6F0] rounded-xl border border-[#EBDCD0] space-y-2">
-              <div className="text-xs font-bold text-[#854820] uppercase tracking-wider">Select Service Page:</div>
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  onClick={() => handleSelectService('health')}
-                  className={`py-2 px-2.5 rounded-lg text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 ${
-                    activeService === 'health'
-                      ? 'bg-[#854820] text-white shadow-xs'
-                      : 'bg-white text-[#3D2314] border border-[#E8DACD]'
-                  }`}
-                >
-                  <HeartPulse className="w-3.5 h-3.5" />
-                  <span>Health Astrology</span>
-                </button>
-                <button
-                  onClick={() => handleSelectService('career')}
-                  className={`py-2 px-2.5 rounded-lg text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 ${
-                    activeService === 'career'
-                      ? 'bg-[#854820] text-white shadow-xs'
-                      : 'bg-white text-[#3D2314] border border-[#E8DACD]'
-                  }`}
-                >
-                  <Briefcase className="w-3.5 h-3.5" />
-                  <span>Career Astrology</span>
-                </button>
-              </div>
-            </div>
+            <a 
+              href="#videos" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 px-3 rounded-lg hover:bg-gray-100"
+            >
+              Masterclasses
+            </a>
+            <a 
+              href="#faq" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 px-3 rounded-lg hover:bg-gray-100"
+            >
+              FAQs
+            </a>
             <a 
               href="#hero-lead-form" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg hover:bg-gray-100"
+              className="py-2 px-3 rounded-lg hover:bg-gray-100 text-[#854820] font-bold"
             >
-              Contact
-            </a>
-            <a 
-              href="#career-guide" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg hover:bg-gray-100"
-            >
-              Blogs
+              Book Consultation
             </a>
           </div>
 
