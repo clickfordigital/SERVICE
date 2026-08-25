@@ -36,7 +36,7 @@ const PLANETARY_CAREER_MAP = [
     archetype: 'Wisdom, Strategic Advisory, Banking & Education',
     domains: 'Investment Banking, Wealth Management, Corporate Mentorship, Higher Academia, Research, Judiciary.',
     strengthEffect: 'Ethical reputation, visionary decision-making, global investor confidence, and steady wealth accumulation.',
-    color: 'from-yellow-600 to-amber-500'
+    color: 'from-amber-700 to-amber-600'
   },
   {
     planet: 'Venus (Shukra)',

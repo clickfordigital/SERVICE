@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
-import { AstrologicalThemeCustomizer } from './components/AstrologicalThemeCustomizer';
 import { JsonLdSchema } from './components/JsonLdSchema';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
@@ -130,9 +129,6 @@ export default function App() {
           isOpen={isBookingModalOpen} 
           onClose={handleCloseBooking} 
         />
-
-        {/* Astrological & Theme Customizer Drawer Widget */}
-        <AstrologicalThemeCustomizer />
       </div>
     </ThemeProvider>
   );
