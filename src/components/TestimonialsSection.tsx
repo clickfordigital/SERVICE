@@ -65,14 +65,14 @@ export const TestimonialsSection: React.FC = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {filteredReviews.map((item) => (
             <div
               key={item.id}
               id={`review-${item.id}`}
-              className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-md transition-all flex flex-col justify-between"
+              className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-md transition-all flex flex-col justify-between h-full"
             >
-              <div>
+              <div className="flex-1 flex flex-col">
                 {/* Rating & Date */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1 text-[#C68A2C]">
@@ -86,28 +86,28 @@ export const TestimonialsSection: React.FC = () => {
                 </div>
 
                 {/* Story quote */}
-                <div className="relative mb-4">
+                <div className="relative mb-4 flex-1">
                   <Quote className="w-8 h-8 text-[#EADBD0] absolute -top-3 -left-2 -z-0 opacity-60" />
-                  <p className="text-xs sm:text-sm text-[#4A3528] leading-relaxed relative z-10 italic">
+                  <p className="text-xs sm:text-sm text-[#4A3528] leading-relaxed relative z-10 italic min-h-[5.5rem]">
                     "{item.story}"
                   </p>
                 </div>
 
                 {/* Highlighted Outcome Box */}
-                <div className="bg-[#FAF6F0] p-3 rounded-xl border border-[#E8DACD] mb-5">
+                <div className="bg-[#FAF6F0] p-3 rounded-xl border border-[#E8DACD] mb-5 min-h-[5.5rem] flex flex-col justify-center">
                   <div className="text-[10px] font-bold text-[#854820] uppercase tracking-wider mb-1 flex items-center gap-1">
                     <Sparkles className="w-3 h-3 text-[#C68A2C]" /> Outcome Achieved:
                   </div>
-                  <p className="text-xs font-semibold text-[#2C1E16]">
+                  <p className="text-xs font-semibold text-[#2C1E16] leading-snug">
                     {item.outcome}
                   </p>
                 </div>
               </div>
 
               {/* Author Footer */}
-              <div className="pt-4 border-t border-[#F0E4D8] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#F0E4D8] flex items-center justify-between min-h-[52px]">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#F5EBE1] text-[#854820] font-bold font-serif flex items-center justify-center border border-[#E8DACD]">
+                  <div className="w-10 h-10 rounded-full bg-[#F5EBE1] text-[#854820] font-bold font-serif flex items-center justify-center border border-[#E8DACD] shrink-0">
                     {item.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>

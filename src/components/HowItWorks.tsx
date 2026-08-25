@@ -25,38 +25,42 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
         </div>
 
         {/* 3 Step Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           
           {/* Step 1 */}
           <div
             id="step-card-01"
-            className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_30px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col justify-between"
+            className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_30px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col h-full"
           >
-            <div>
+            <div className="flex-1 flex flex-col">
               <div className="flex items-center justify-between mb-5">
                 <span className="font-cinzel text-3xl font-extrabold text-[#854820]/80 tracking-wider">
                   01
                 </span>
-                <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD]">
+                <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD] shrink-0">
                   <Calendar className="w-5 h-5" />
                 </div>
               </div>
 
-              <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] mb-1">
-                Book Your Consultation
-              </h3>
-              <div className="text-xs font-semibold text-[#854820] uppercase tracking-wider mb-3.5">
-                Select Your Preferred Slot &amp; Consultation Mode
+              <div className="min-h-[3.25rem] flex items-center mb-1">
+                <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314]">
+                  Book Your Consultation
+                </h3>
+              </div>
+              <div className="min-h-[2.5rem] flex items-center mb-3.5">
+                <span className="text-xs font-semibold text-[#854820] uppercase tracking-wider">
+                  Select Your Preferred Slot &amp; Consultation Mode
+                </span>
               </div>
 
-              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed">
+              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed flex-1">
                 <p>
                   Choose an available appointment and your preferred consultation option. Depending on available services, you can select a live video consultation, phone consultation or another listed consultation format. The purpose is to provide enough time to discuss your professional situation and complete your career astrology analysis without relying on a generic automated report.
                 </p>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between">
+            <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between min-h-[44px]">
               <button
                 onClick={onOpenBooking}
                 className="text-xs font-bold text-[#854820] hover:text-[#663312] flex items-center gap-1.5 cursor-pointer"
@@ -70,26 +74,30 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
           {/* Step 2 */}
           <div
             id="step-card-02"
-            className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_30px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col justify-between"
+            className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_30px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col h-full"
           >
-            <div>
+            <div className="flex-1 flex flex-col">
               <div className="flex items-center justify-between mb-5">
                 <span className="font-cinzel text-3xl font-extrabold text-[#854820]/80 tracking-wider">
                   02
                 </span>
-                <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD]">
+                <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD] shrink-0">
                   <FileText className="w-5 h-5" />
                 </div>
               </div>
 
-              <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] mb-1">
-                Share Your Correct Birth Details
-              </h3>
-              <div className="text-xs font-semibold text-[#854820] uppercase tracking-wider mb-3.5">
-                Date, Exact Birth Time &amp; Place of Birth
+              <div className="min-h-[3.25rem] flex items-center mb-1">
+                <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314]">
+                  Share Your Correct Birth Details
+                </h3>
+              </div>
+              <div className="min-h-[2.5rem] flex items-center mb-3.5">
+                <span className="text-xs font-semibold text-[#854820] uppercase tracking-wider">
+                  Date, Exact Birth Time &amp; Place of Birth
+                </span>
               </div>
 
-              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed space-y-2.5">
+              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed space-y-2 flex-1">
                 <p className="font-semibold text-[#3D2314]">Provide:</p>
                 <ul className="space-y-1.5 pl-0.5">
                   {[
@@ -113,7 +121,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between">
+            <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between min-h-[44px]">
               <span className="text-xs font-medium text-[#8A7A70]">Step 2 of 3</span>
             </div>
           </div>
@@ -121,33 +129,37 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenBooking }) => {
           {/* Step 3 */}
           <div
             id="step-card-03"
-            className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_30px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col justify-between"
+            className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_30px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col h-full"
           >
-            <div>
+            <div className="flex-1 flex flex-col">
               <div className="flex items-center justify-between mb-5">
                 <span className="font-cinzel text-3xl font-extrabold text-[#854820]/80 tracking-wider">
                   03
                 </span>
-                <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD]">
+                <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD] shrink-0">
                   <Sparkles className="w-5 h-5" />
                 </div>
               </div>
 
-              <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] mb-1">
-                Receive Personalized Career Guidance
-              </h3>
-              <div className="text-xs font-semibold text-[#854820] uppercase tracking-wider mb-3.5">
-                Detailed Horoscope Reading &amp; Practical Roadmap
+              <div className="min-h-[3.25rem] flex items-center mb-1">
+                <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314]">
+                  Receive Personalized Career Guidance
+                </h3>
+              </div>
+              <div className="min-h-[2.5rem] flex items-center mb-3.5">
+                <span className="text-xs font-semibold text-[#854820] uppercase tracking-wider">
+                  Detailed Horoscope Reading &amp; Practical Roadmap
+                </span>
               </div>
 
-              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed">
+              <div className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed flex-1">
                 <p>
                   During your session, Acharya Ganesh explains the planetary factors influencing your professional life and addresses your important questions. Your career horoscope by date of birth may include discussion around suitable professional directions, Dasha periods, job transitions, promotions, challenges, income development and other career-related patterns visible in your horoscope.
                 </p>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between">
+            <div className="mt-6 pt-4 border-t border-[#F0E4D8] flex items-center justify-between min-h-[44px]">
               <span className="text-xs font-medium text-[#8A7A70]">Step 3 of 3</span>
             </div>
           </div>

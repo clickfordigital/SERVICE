@@ -57,23 +57,32 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({ onOpen
               <div
                 key={item.id}
                 id={`deliverable-${item.id}`}
-                className={`bg-[#FAF6F0] rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] hover:border-[#854820]/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between ${
+                className={`bg-[#FAF6F0] rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] hover:border-[#854820]/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full ${
                   isLastSingle ? 'lg:col-span-3 max-w-xl mx-auto w-full' : ''
                 }`}
               >
-                <div>
-                  <div className="w-11 h-11 rounded-xl bg-white text-[#854820] flex items-center justify-center border border-[#E8DACD] shadow-xs mb-4">
+                <div className="flex-1 flex flex-col">
+                  <div className="w-11 h-11 rounded-xl bg-white text-[#854820] flex items-center justify-center border border-[#E8DACD] shadow-xs mb-4 shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="font-serif-heading text-lg sm:text-xl font-bold text-[#3D2314] mb-2 leading-snug">
-                    {item.title}
-                  </h3>
+                  <div className="min-h-[3rem] flex items-center mb-2">
+                    <h3 className="font-serif-heading text-lg sm:text-xl font-bold text-[#3D2314] leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
 
-                  <p className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed flex-1">
                     {item.description}
                   </p>
                 </div>
+
+                {item.badge && (
+                  <div className="mt-4 pt-3 border-t border-[#EBDCD0] flex items-center justify-between text-xs font-semibold text-[#854820] min-h-[36px]">
+                    <span>{item.badge}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C68A2C]"></span>
+                  </div>
+                )}
               </div>
             );
           })}

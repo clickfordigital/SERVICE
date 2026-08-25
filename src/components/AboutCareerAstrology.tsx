@@ -151,23 +151,25 @@ export const AboutCareerAstrology: React.FC<AboutCareerAstrologyProps> = ({
             </div>
 
             {/* 4 Pillars Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 items-stretch">
               {PILLARS.map((pillar, idx) => {
                 const Icon = pillar.icon;
                 return (
                   <div 
                     key={idx}
-                    className="p-3.5 rounded-xl bg-[#FAF6F0] border border-[#EBDCD0] hover:border-[#854820]/40 transition-colors shadow-2xs"
+                    className="p-4 rounded-xl bg-[#FAF6F0] border border-[#EBDCD0] hover:border-[#854820]/40 transition-colors shadow-2xs flex flex-col justify-between h-full"
                   >
-                    <div className="w-7 h-7 rounded-lg bg-[#854820]/10 text-[#854820] flex items-center justify-center mb-2">
-                      <Icon className="w-3.5 h-3.5" />
+                    <div>
+                      <div className="w-8 h-8 rounded-lg bg-[#854820]/10 text-[#854820] flex items-center justify-center mb-2.5 shrink-0">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <h3 className="font-bold text-sm text-[#3D2314] mb-1 leading-snug">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-xs text-[#6B5B52] leading-relaxed">
+                        {pillar.desc}
+                      </p>
                     </div>
-                    <h3 className="font-bold text-sm text-[#3D2314] mb-0.5">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-xs text-[#6B5B52] leading-relaxed">
-                      {pillar.desc}
-                    </p>
                   </div>
                 );
               })}

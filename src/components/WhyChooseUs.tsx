@@ -20,35 +20,37 @@ export const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* 4 Cards Grid - Enhanced visual replica of screenshot */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
           {WHY_CHOOSE_ITEMS.map((item, idx) => {
             const Icon = ICONS[idx % ICONS.length];
             return (
               <div
                 key={idx}
                 id={`why-choose-card-${idx}`}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_28px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-[0_4px_20px_rgba(133,72,32,0.06)] hover:shadow-[0_8px_28px_rgba(133,72,32,0.12)] hover:border-[#854820]/40 transition-all duration-300 flex flex-col justify-between group h-full"
               >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center mb-4 group-hover:bg-[#854820] group-hover:text-white transition-colors duration-300">
+                <div className="flex-1 flex flex-col">
+                  <div className="w-10 h-10 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center mb-4 group-hover:bg-[#854820] group-hover:text-white transition-colors duration-300 shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
                   
-                  <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] tracking-tight mb-2.5">
-                    {item.title}
-                  </h3>
+                  <div className="min-h-[3.5rem] flex items-start mb-2.5">
+                    <h3 className="font-serif-heading text-lg sm:text-xl font-bold text-[#3D2314] tracking-tight leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
                   
-                  <p className="text-sm text-[#6B5B52] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#6B5B52] leading-relaxed flex-1">
                     {item.description}
                   </p>
                 </div>
 
-                {item.badge ? (
-                  <div className="mt-5 pt-4 border-t border-[#F0E4D8] flex items-center justify-between text-xs font-semibold text-[#854820]">
-                    <span>{item.badge}</span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C68A2C]"></span>
+                {item.badge && (
+                  <div className="mt-5 pt-4 border-t border-[#F0E4D8] flex items-center justify-between text-xs font-semibold text-[#854820] min-h-[44px]">
+                    <span className="leading-tight">{item.badge}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C68A2C] shrink-0 ml-2"></span>
                   </div>
-                ) : null}
+                )}
               </div>
             );
           })}

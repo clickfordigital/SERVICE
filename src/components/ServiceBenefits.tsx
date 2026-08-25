@@ -53,11 +53,11 @@ export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking 
               <div
                 key={benefit.id}
                 id={`benefit-card-${benefit.id}`}
-                className="bg-[#FFFDF9] hover:bg-[#FAF6F0] rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] hover:border-[#854820]/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                className="bg-[#FFFDF9] hover:bg-[#FAF6F0] rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] hover:border-[#854820]/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between h-full"
               >
-                <div>
+                <div className="flex-1 flex flex-col">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD]">
+                    <div className="w-11 h-11 rounded-xl bg-[#F5EBE1] text-[#854820] flex items-center justify-center border border-[#E8DACD] shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <span className="text-xs font-bold text-[#854820] bg-white px-3 py-1 rounded-full border border-[#E8DACD] shadow-2xs">
@@ -65,16 +65,20 @@ export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking 
                     </span>
                   </div>
 
-                  <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] mb-3 leading-snug">
-                    {benefit.title}
-                  </h3>
+                  <div className="min-h-[3.75rem] flex items-center mb-3">
+                    <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-[#3D2314] leading-snug">
+                      {benefit.title}
+                    </h3>
+                  </div>
 
-                  <p className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed mb-4">
-                    {benefit.shortDesc}
-                  </p>
+                  <div className="min-h-[3.5rem] mb-4">
+                    <p className="text-xs sm:text-sm text-[#5D4E45] leading-relaxed">
+                      {benefit.shortDesc}
+                    </p>
+                  </div>
 
                   {/* Bullet points */}
-                  <ul className="space-y-2.5 mb-5">
+                  <ul className="space-y-2.5 mb-5 flex-1">
                     {benefit.keyAspects.map((point, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-xs text-[#5A4A42] leading-relaxed">
                         <CheckCircle2 className="w-4 h-4 text-[#854820] shrink-0 mt-0.5" />
@@ -87,7 +91,7 @@ export const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({ onOpenBooking 
                 <div className="pt-4 mt-2 border-t border-[#F0E4D8]">
                   <button
                     onClick={onOpenBooking}
-                    className="w-full text-xs sm:text-sm font-bold text-white bg-[#854820] hover:bg-[#663312] px-4 py-2.5 rounded-xl transition-all shadow-xs hover:shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full text-xs sm:text-sm font-bold text-white bg-[#854820] hover:bg-[#663312] px-4 py-2.5 rounded-xl transition-all shadow-xs hover:shadow-md flex items-center justify-center gap-1.5 cursor-pointer min-h-[42px]"
                   >
                     <span>Consult Now</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -77,132 +77,140 @@ export const InteractiveCareerAnalyzer: React.FC<InteractiveCareerAnalyzerProps>
         </div>
 
         {/* 2-Part Interactive Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left: Career Houses Selector */}
-          <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-sm space-y-6">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-serif-heading text-2xl font-bold text-[#3D2314]">
-                  Key Career Houses (Bhavas)
-                </h3>
-                <span className="text-xs font-semibold text-[#854820] bg-[#F5EBE1] px-2.5 py-1 rounded-full">
-                  Click House to Inspect
-                </span>
-              </div>
-              <p className="text-xs text-[#6B5B52]">
-                In Vedic Jyotish, your professional trajectory is decoded through specific Bhavas in your D1 and D10 charts.
-              </p>
-            </div>
-
-            {/* House selection pills */}
-            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-              {CAREER_HOUSES.map((house) => (
-                <button
-                  key={house.houseNumber}
-                  onClick={() => setSelectedHouse(house.houseNumber)}
-                  className={`py-2.5 px-2 rounded-xl text-xs font-bold transition-all text-center cursor-pointer border ${
-                    selectedHouse === house.houseNumber
-                      ? 'bg-[#854820] text-white border-[#854820] shadow-md scale-105'
-                      : 'bg-[#FAF6F0] text-[#4A3528] border-[#E8DACD] hover:bg-[#F0E4D8]'
-                  }`}
-                >
-                  <div className="text-sm font-cinzel">{house.houseNumber}th</div>
-                  <div className="text-[10px] font-normal opacity-90 truncate">House</div>
-                </button>
-              ))}
-            </div>
-
-            {/* Selected House Deep Dive Card */}
-            <div className="p-5 rounded-xl bg-[#FAF6F0] border border-[#E8DACD] space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#854820] tracking-wider uppercase font-cinzel">
-                  {currentHouse.sanskritName}
-                </span>
-                <span className="text-xs font-medium text-[#7A6B62] bg-white px-2 py-0.5 rounded border border-[#E8DACD]">
-                  Rulers: {currentHouse.planetaryRulers}
-                </span>
+          <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-sm space-y-6 flex flex-col justify-between h-full">
+            <div className="space-y-6 flex-1 flex flex-col">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-serif-heading text-2xl font-bold text-[#3D2314]">
+                    Key Career Houses (Bhavas)
+                  </h3>
+                  <span className="text-xs font-semibold text-[#854820] bg-[#F5EBE1] px-2.5 py-1 rounded-full">
+                    Click House to Inspect
+                  </span>
+                </div>
+                <p className="text-xs text-[#6B5B52]">
+                  In Vedic Jyotish, your professional trajectory is decoded through specific Bhavas in your D1 and D10 charts.
+                </p>
               </div>
 
-              <h4 className="font-serif-heading text-xl font-bold text-[#3D2314]">
-                {currentHouse.houseName}
-              </h4>
+              {/* House selection pills */}
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                {CAREER_HOUSES.map((house) => (
+                  <button
+                    key={house.houseNumber}
+                    onClick={() => setSelectedHouse(house.houseNumber)}
+                    className={`py-2.5 px-2 rounded-xl text-xs font-bold transition-all text-center cursor-pointer border ${
+                      selectedHouse === house.houseNumber
+                        ? 'bg-[#854820] text-white border-[#854820] shadow-md scale-105'
+                        : 'bg-[#FAF6F0] text-[#4A3528] border-[#E8DACD] hover:bg-[#F0E4D8]'
+                    }`}
+                  >
+                    <div className="text-sm font-cinzel">{house.houseNumber}th</div>
+                    <div className="text-[10px] font-normal opacity-90 truncate">House</div>
+                  </button>
+                ))}
+              </div>
 
-              <p className="text-sm text-[#5D4E45] leading-relaxed">
-                {currentHouse.careerSignificance}
-              </p>
+              {/* Selected House Deep Dive Card */}
+              <div className="p-5 rounded-xl bg-[#FAF6F0] border border-[#E8DACD] space-y-3 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold text-[#854820] tracking-wider uppercase font-cinzel">
+                      {currentHouse.sanskritName}
+                    </span>
+                    <span className="text-xs font-medium text-[#7A6B62] bg-white px-2 py-0.5 rounded border border-[#E8DACD]">
+                      Rulers: {currentHouse.planetaryRulers}
+                    </span>
+                  </div>
 
-              <div className="pt-2 border-t border-[#E8DACD]">
-                <div className="text-xs font-bold text-[#4A3528] mb-1.5">Impact on Your Career:</div>
-                <ul className="space-y-1.5">
-                  {currentHouse.sampleOutcomes.map((outcome, oIdx) => (
-                    <li key={oIdx} className="text-xs text-[#6B5B52] flex items-start gap-2">
-                      <span className="text-[#854820] font-bold">•</span>
-                      <span>{outcome}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <h4 className="font-serif-heading text-xl font-bold text-[#3D2314] mb-1.5">
+                    {currentHouse.houseName}
+                  </h4>
+
+                  <p className="text-sm text-[#5D4E45] leading-relaxed">
+                    {currentHouse.careerSignificance}
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-[#E8DACD]">
+                  <div className="text-xs font-bold text-[#4A3528] mb-1.5">Impact on Your Career:</div>
+                  <ul className="space-y-1.5">
+                    {currentHouse.sampleOutcomes.map((outcome, oIdx) => (
+                      <li key={oIdx} className="text-xs text-[#6B5B52] flex items-start gap-2">
+                        <span className="text-[#854820] font-bold">•</span>
+                        <span>{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right: Planetary Significator Explorer */}
-          <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-sm space-y-6">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-serif-heading text-2xl font-bold text-[#3D2314]">
-                  Planetary Career Influences (Grahas)
-                </h3>
-                <span className="text-xs font-semibold text-[#854820] bg-[#F5EBE1] px-2.5 py-1 rounded-full">
-                  6 Key Rulers
-                </span>
-              </div>
-              <p className="text-xs text-[#6B5B52]">
-                Your dominant planet determines your professional archetype, work style, and industry fit.
-              </p>
-            </div>
-
-            {/* Planetary Pills */}
-            <div className="flex flex-wrap gap-2">
-              {PLANETARY_CAREER_MAP.map((p, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActivePlanet(idx)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
-                    activePlanet === idx
-                      ? 'bg-[#854820] text-white border-[#854820] shadow-sm'
-                      : 'bg-[#FAF6F0] text-[#4A3528] border-[#E8DACD] hover:bg-[#F0E4D8]'
-                  }`}
-                >
-                  {p.planet.split(' ')[0]}
-                </button>
-              ))}
-            </div>
-
-            {/* Active Planet Card */}
-            <div className="p-5 rounded-xl bg-[#FAF6F0] border border-[#E8DACD] space-y-3">
-              <div className="flex items-center justify-between">
-                <h4 className="font-serif-heading text-xl font-bold text-[#3D2314]">
-                  {currentPlanet.planet}
-                </h4>
-                <span className="text-[11px] font-bold text-[#854820] bg-white px-2.5 py-1 rounded-full border border-[#E8DACD]">
-                  {currentPlanet.archetype.split(',')[0]}
-                </span>
-              </div>
-
+          <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#EBDCD0] shadow-sm space-y-6 flex flex-col justify-between h-full">
+            <div className="space-y-6 flex-1 flex flex-col">
               <div>
-                <div className="text-xs font-bold text-[#4A3528] mb-0.5">Core Archetype:</div>
-                <p className="text-xs text-[#5D4E45] font-medium">{currentPlanet.archetype}</p>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-serif-heading text-2xl font-bold text-[#3D2314]">
+                    Planetary Career Influences (Grahas)
+                  </h3>
+                  <span className="text-xs font-semibold text-[#854820] bg-[#F5EBE1] px-2.5 py-1 rounded-full">
+                    6 Key Rulers
+                  </span>
+                </div>
+                <p className="text-xs text-[#6B5B52]">
+                  Your dominant planet determines your professional archetype, work style, and industry fit.
+                </p>
               </div>
 
-              <div>
-                <div className="text-xs font-bold text-[#4A3528] mb-0.5">Suitable Domains &amp; Industries:</div>
-                <p className="text-xs text-[#6B5B52] leading-relaxed">{currentPlanet.domains}</p>
+              {/* Planetary Pills */}
+              <div className="flex flex-wrap gap-2">
+                {PLANETARY_CAREER_MAP.map((p, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActivePlanet(idx)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
+                      activePlanet === idx
+                        ? 'bg-[#854820] text-white border-[#854820] shadow-sm'
+                        : 'bg-[#FAF6F0] text-[#4A3528] border-[#E8DACD] hover:bg-[#F0E4D8]'
+                    }`}
+                  >
+                    {p.planet.split(' ')[0]}
+                  </button>
+                ))}
               </div>
 
-              <div className="pt-2 border-t border-[#E8DACD]">
-                <div className="text-xs font-bold text-[#4A3528] mb-0.5">When Strong in Your Kundli:</div>
-                <p className="text-xs text-[#5D4E45] leading-relaxed">{currentPlanet.strengthEffect}</p>
+              {/* Active Planet Card */}
+              <div className="p-5 rounded-xl bg-[#FAF6F0] border border-[#E8DACD] space-y-3 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-serif-heading text-xl font-bold text-[#3D2314]">
+                      {currentPlanet.planet}
+                    </h4>
+                    <span className="text-[11px] font-bold text-[#854820] bg-white px-2.5 py-1 rounded-full border border-[#E8DACD]">
+                      {currentPlanet.archetype.split(',')[0]}
+                    </span>
+                  </div>
+
+                  <div className="mb-2">
+                    <div className="text-xs font-bold text-[#4A3528] mb-0.5">Core Archetype:</div>
+                    <p className="text-xs text-[#5D4E45] font-medium">{currentPlanet.archetype}</p>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-bold text-[#4A3528] mb-0.5">Suitable Domains &amp; Industries:</div>
+                    <p className="text-xs text-[#6B5B52] leading-relaxed">{currentPlanet.domains}</p>
+                  </div>
+                </div>
+
+                <div className="pt-2 border-t border-[#E8DACD]">
+                  <div className="text-xs font-bold text-[#4A3528] mb-0.5">When Strong in Your Kundli:</div>
+                  <p className="text-xs text-[#5D4E45] leading-relaxed">{currentPlanet.strengthEffect}</p>
+                </div>
               </div>
             </div>
           </div>
